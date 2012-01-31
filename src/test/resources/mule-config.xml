@@ -25,13 +25,13 @@
       xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-        http://www.mulesoft.org/schema/mule/getsatisfaction http://www.mulesoft.org/schema/mule/getsatisfaction/1.0-SNAPSHOT/mule-getsatisfaction.xsd">
+        http://www.mulesoft.org/schema/mule/getsatisfaction http://www.mulesoft.org/schema/mule/getsatisfaction/current/mule-getsatisfaction.xsd">
 
-    <getsatisfaction:config myProperty="Some string"
-            username="xxx" password="yyy"/>
+    <getsatisfaction:config key="1fjo088bougl" secret="aqfi8q65z031wlhqsrj37rhuv1qlwy78" email="mariano.capurro@mulesoft.com" uid="mariano.capurro" fullName="Mariano Capurro"/>
 
-    <flow name="testFlow">
-        <getsatisfaction:my-processor content="Another string"/>
+    <flow name="test">
+        <getsatisfaction:get-topics sortBy="MOST_REPLIES"/>
+        <logger level="INFO" message="#[payload]"/>
     </flow>
 
 </mule>

@@ -1,18 +1,11 @@
 /**
- * Mule Development Kit
- * Copyright 2010-2011 (c) MuleSoft, Inc.  All rights reserved.  http://www.mulesoft.com
+ * Mule GetStaisfaction Connector
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Copyright (c) MuleSoft, Inc.  All rights reserved.  http://www.mulesoft.com
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * The software in this package is published under the terms of the CPAL v1.0
+ * license, a copy of which has been included with this distribution in the
+ * LICENSE.txt file.
  */
 
 /**
@@ -38,7 +31,19 @@ public class GetSatisfactionConnectorTest extends FunctionalTestCase
     @Test
     public void testFlow() throws Exception
     {
-        runFlowAndExpect("testFlow", "Another string");
+        runFlow("test");
+    }
+
+    /**
+     * Run the flow specified by name and assert equality on the expected output
+     *
+     * @param flowName The name of the flow to run
+     */
+    protected <T> void runFlow(String flowName) throws Exception
+    {
+        Flow flow = lookupFlowConstruct(flowName);
+        MuleEvent event = AbstractMuleTestCase.getTestEvent(null);
+        MuleEvent responseEvent = flow.process(event);
     }
 
     /**

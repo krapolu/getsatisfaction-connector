@@ -1,0 +1,27 @@
+<!-- BEGIN_INCLUDE(getsatisfaction:get-topic) -->
+<getsatisfaction:get-topic idOrSlug="001"/>
+<!-- END_INCLUDE(getsatisfaction:get-topic) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-topics) -->
+<getsatisfaction:get-topics sortBy="MOST_REPLIES"/>
+<!-- END_INCLUDE(getsatisfaction:get-topics) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-topic-by-company) -->
+<getsatisfaction:get-topic-by-company idOrSlug="001" company="mulesoft"/>
+<!-- END_INCLUDE(getsatisfaction:get-topic-by-company) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-topics-by-company) -->
+<getsatisfaction:get-topics-by-company company="mulesoft"/>
+<!-- END_INCLUDE(getsatisfaction:get-topics-by-company) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-topics-by-company-and-product) -->
+<getsatisfaction:get-topics-by-company-and-product company="mulesoft" product="muleion"/>
+<!-- END_INCLUDE(getsatisfaction:get-topics-by-company-and-product) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-products-by-company) -->
+<getsatisfaction:get-products-by-company company="mulesoft"/>
+<!-- END_INCLUDE(getsatisfaction:get-products-by-company) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-replies) -->
+<getsatisfaction:get-replies/>
+<!-- END_INCLUDE(getsatisfaction:get-replies) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-replies-by-topic) -->
+<getsatisfaction:get-replies-by-topic idOrSlug="001"/>
+<!-- END_INCLUDE(getsatisfaction:get-replies-by-topic) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:get-replies-by-user) -->
+<getsatisfaction:get-replies-by-user userId="001"/>
+<!-- END_INCLUDE(getsatisfaction:get-replies-by-user) -->
