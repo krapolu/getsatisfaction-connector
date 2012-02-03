@@ -178,6 +178,8 @@ Summary:
 
 
 
+  &#124; <a href="#trnasmethods">Transformers</a>
+
 </div><!-- end sum-details-links -->
 
 <div class="api-level">
@@ -264,6 +266,30 @@ Summary:
 <!-- ========== MESSAGE PROCESSOR SUMMARY =========== -->
 <table id="promethods" class="jd-sumtable"><tr><th colspan="12">Message Processors</th></tr>
 
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#create-reply-for-topic">&lt;getsatisfaction:create-reply-for-topic&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Create reply at company
+ <p/>
+ <br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#create-topic-at-company">&lt;getsatisfaction:create-topic-at-company&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Create topic at company
+ <p/>
+ <br/></div>
+        
+  </td></tr>
 
 
 	 
@@ -380,6 +406,87 @@ Summary:
 
 
 
+
+
+<!-- ========== TRANSFORMER SUMMARY =========== -->
+<table id="trnasmethods" class="jd-sumtable"><tr><th colspan="12">Transformers</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#transform-json-to-products">&lt;getsatisfaction:transform-json-to-products&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a list of products
+ <p/>
+ <br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#transform-json-to-replies">&lt;getsatisfaction:transform-json-to-replies&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a list of replies
+ <p/>
+ <br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#transform-json-to-topic">&lt;getsatisfaction:transform-json-to-topic&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a topic
+ <p/>
+ <br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#transform-json-to-topics">&lt;getsatisfaction:transform-json-to-topics&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a list of topics
+ <p/>
+ <br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#transform-reply-to-json">&lt;getsatisfaction:transform-reply-to-json&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a <br/><code><a href="../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> object
+ <p/>
+ <br/></div>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../mule/getsatisfaction.html#transform-topic-to-json">&lt;getsatisfaction:transform-topic-to-json&gt;</a></nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a <br/><code><a href="../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> object
+ <p/>
+ <br/></div>
+        
+  </td></tr>
+
+
+
+</table>
 
 
 
@@ -503,6 +610,246 @@ attribute on each operation.</p>
 
 <h2>Message Processors</h2>
 
+
+
+<A NAME="create-reply-for-topic"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;getsatisfaction:create-reply-for-topic&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create reply at company
+ <p/>
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>INCLUDE_ERROR</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>idOrSlug</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Topic Id or Slug</td>
+                </tr>
+                
+                
+          
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>reply</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Reply to reply</td>
+                </tr>
+                
+                
+          
+          
+          <tr><th colspan="12">Connection Parameters<br/><span style="font-weight: 200;">This are only required if you didn't specified them at the configuration element. They are also useful for overriding the values of the configurations or even if you need to extract them from the Mule message since they support expression evaluation.</span></th></tr>
+            
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>uid</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>User id</td>
+                </tr>
+                
+            
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>email</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The email of the user</td>
+                </tr>
+                
+            
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>fullName</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Full name of the user</td>
+                </tr>
+                
+            
+          
+          
+          
+            <tr><th colspan="12">Retry and Reconnect<br/><span style="font-weight: 200;">This message processor supports automatic retry and reconnect. If the API call fail for a known error then the API will be automatically retried. This does not happen on every type of error, only a few that has been selected and are known to be recoverable from.</span></th></tr>
+            <tr class="alt-color api apilevel-" >
+                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
+                <td class="jd-descrcol">1</td>
+                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
+            </tr>
+            
+          
+          
+        </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+        <table id="lconfig" class="jd-sumtable">
+          
+          
+            
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>A JSON representing a reply</li></ul>
+  </div>
+    
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Exception Payload</h5>
+      <table class="jd-tagtable">
+        <tr>
+            <th>IOException</td>
+            <td>If there is a communication error
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="create-topic-at-company"></A>
+
+<div class="jd-details api apilevel-">
+    <h4 class="jd-details-title">
+      <span class="sympad">&lt;getsatisfaction:create-topic-at-company&gt;</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create topic at company
+ <p/>
+ <div class="jd-tagdata"><h5 class="jd-tagtitle">XML Sample</h5><pre>&lt;getsatisfaction:create-topic-at-company companyId="mulesoft" subject="test for product affiliate" style="PRAISE"
+                                         additionalDetail="additional detail goes here"&gt;
+    &lt;getsatisfaction:keywords&gt;
+        &lt;getsatisfaction:keyword&gt;keyword&lt;/getsatisfaction:keyword&gt;
+    &lt;/getsatisfaction:keywords&gt;
+    &lt;getsatisfaction:products&gt;
+        &lt;getsatisfaction:product&gt;muleion&lt;/getsatisfaction:product&gt;
+    &lt;/getsatisfaction:products&gt;
+&lt;/getsatisfaction:create-topic-at-company&gt;</pre></div></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Attributes</h5>
+
+        <table id="lconfig" class="jd-sumtable">
+        <tr><th>Name</th><th>Default Value</th><th>Description</th></tr>
+        <tr>
+          <td class="jd-linkcol"><nobr>config-ref</nobr></td>
+          <td class="jd-descrcol"></td>
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify which configuration to use.</td></tr>
+          
+          
+                
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>companyId</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Company Id</td>
+                </tr>
+                
+                
+          
+                
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>topic</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%">Topic to create</td>
+                </tr>
+                
+                
+          
+          
+          <tr><th colspan="12">Connection Parameters<br/><span style="font-weight: 200;">This are only required if you didn't specified them at the configuration element. They are also useful for overriding the values of the configurations or even if you need to extract them from the Mule message since they support expression evaluation.</span></th></tr>
+            
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>uid</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>User id</td>
+                </tr>
+                
+            
+                <tr class="alt-color api apilevel-" >
+                    <td class="jd-linkcol"><nobr>email</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The email of the user</td>
+                </tr>
+                
+            
+                <tr class=" api apilevel-" >
+                    <td class="jd-linkcol"><nobr>fullName</nobr></td>
+                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Full name of the user</td>
+                </tr>
+                
+            
+          
+          
+          
+            <tr><th colspan="12">Retry and Reconnect<br/><span style="font-weight: 200;">This message processor supports automatic retry and reconnect. If the API call fail for a known error then the API will be automatically retried. This does not happen on every type of error, only a few that has been selected and are known to be recoverable from.</span></th></tr>
+            <tr class="alt-color api apilevel-" >
+                <td class="jd-linkcol"><nobr>retryMax</nobr></td>
+                <td class="jd-descrcol">1</td>
+                <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Specify how many times this operation can be retried automatically</td>
+            </tr>
+            
+          
+          
+        </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Child Elements</h5>
+        <table id="lconfig" class="jd-sumtable">
+          
+          
+            
+          
+            
+          
+      </table>
+  </div>
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Return Payload</h5>
+      <ul class="nolist"><li>A JSON representing a reply</li></ul>
+  </div>
+    
+  
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Exception Payload</h5>
+      <table class="jd-tagtable">
+        <tr>
+            <th>IOException</td>
+            <td>If there is a communication error
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
 
 
 <A NAME="get-products-by-company"></A>

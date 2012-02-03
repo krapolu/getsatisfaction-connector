@@ -185,6 +185,10 @@
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/model/package-summary.html">org.mule.module.getsatisfaction.model</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/model/transformers/package-summary.html">org.mule.module.getsatisfaction.model.transformers</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/processors/package-summary.html">org.mule.module.getsatisfaction.processors</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/transformers/package-summary.html">org.mule.module.getsatisfaction.transformers</a></li>
@@ -265,6 +269,13 @@
   
   
    
+  
+  
+
+  
+   
+  
+  
   
   
 
@@ -401,6 +412,8 @@ Summary:
   
       implements 
       
+        MuleContextAware 
+      
         Disposable 
       
         Initialisable 
@@ -523,6 +536,8 @@ Summary:
 <table id="inhconstants" class="jd-sumtable"><tr><th>
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Constants</div></th></tr>
+
+
 
 
 
@@ -673,6 +688,17 @@ org.mule.api.lifecycle.Stoppable
           private
           
           
+          MuleContext</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#muleContext">muleContext</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          
+          
           int</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#responseTimeout">responseTimeout</a></td>
           <td class="jd-descrcol" width="100%"></td>
@@ -803,6 +829,8 @@ org.mule.api.lifecycle.Stoppable
 
 
 
+
+
 </table>
 
 
@@ -853,6 +881,46 @@ org.mule.api.lifecycle.Stoppable
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#createReplyForTopic(java.lang.String, org.mule.module.getsatisfaction.model.Reply)">createReplyForTopic</a></span>(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a> reply)</nobr>
+        
+        <div class="jd-descrdiv">Create reply at company
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#createTopicAtCompany(java.lang.String, org.mule.module.getsatisfaction.model.Topic)">createTopicAtCompany</a></span>(String companyId, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a> topic)</nobr>
+        
+        <div class="jd-descrdiv">Create topic at company
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getProductsByCompany(java.lang.String)">getProductsByCompany</a></span>(String company)</nobr>
         
         <div class="jd-descrdiv">Get all products in a particular community
@@ -870,10 +938,10 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getReplies(org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)">getReplies</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getReplies</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
         
         <div class="jd-descrdiv">Get all replies
  <p/>
@@ -890,10 +958,10 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getRepliesByTopic(java.lang.String, org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByTopic</a></span>(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getRepliesByTopic(java.lang.String, org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByTopic</a></span>(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
         
         <div class="jd-descrdiv">Get all replies for a topic
  <p/>
@@ -910,10 +978,10 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getRepliesByUser(java.lang.String, org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByUser</a></span>(String userId, <a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getRepliesByUser(java.lang.String, org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByUser</a></span>(String userId, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
         
         <div class="jd-descrdiv">Get all replies made by a user
  <p/>
@@ -930,7 +998,7 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getTopic(java.lang.String)">getTopic</a></span>(String idOrSlug)</nobr>
@@ -950,7 +1018,7 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getTopicByCompany(java.lang.String, java.lang.String)">getTopicByCompany</a></span>(String company, String idOrSlug)</nobr>
@@ -970,10 +1038,10 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getTopics(java.lang.String, org.mule.module.getsatisfaction.SortCriteria, org.mule.module.getsatisfaction.Style, java.lang.Long, java.lang.String, java.util.List<java.lang.String>, java.lang.String, java.util.List<org.mule.module.getsatisfaction.Status>, java.util.List<java.lang.String>)">getTopics</a></span>(String search, <a href="../../../../../../java/org/mule/module/getsatisfaction/SortCriteria.html">SortCriteria</a> sortBy, <a href="../../../../../../java/org/mule/module/getsatisfaction/Style.html">Style</a> style, Long activeSince, String userId, List&lt;String&gt; products, String tag, List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/Status.html">Status</a>&gt; status, List&lt;String&gt; userDefinedCodes)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getTopics(java.lang.String, org.mule.module.getsatisfaction.model.SortCriteria, org.mule.module.getsatisfaction.model.Style, java.lang.Long, java.lang.String, java.util.List<java.lang.String>, java.lang.String, java.util.List<org.mule.module.getsatisfaction.model.Status>, java.util.List<java.lang.String>)">getTopics</a></span>(String search, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/SortCriteria.html">SortCriteria</a> sortBy, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Style.html">Style</a> style, Long activeSince, String userId, List&lt;String&gt; products, String tag, List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Status.html">Status</a>&gt; status, List&lt;String&gt; userDefinedCodes)</nobr>
         
         <div class="jd-descrdiv">Get all topics in all public Get Satisfaction communities
  <p/>
@@ -990,7 +1058,7 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getTopicsByCompany(java.lang.String)">getTopicsByCompany</a></span>(String company)</nobr>
@@ -1010,7 +1078,7 @@ org.mule.api.lifecycle.Stoppable
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#getTopicsByCompanyAndProduct(java.lang.String, java.lang.String)">getTopicsByCompanyAndProduct</a></span>(String company, String product)</nobr>
@@ -1040,6 +1108,22 @@ org.mule.api.lifecycle.Stoppable
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html#setMuleContext(org.mule.api.MuleContext)">setMuleContext</a></span>(MuleContext context)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1266,6 +1350,46 @@ From class
 	 
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#createReplyForTopic(java.lang.String, org.mule.module.getsatisfaction.model.Reply)">createReplyForTopic</a></span>(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a> reply)</nobr>
+        
+        <div class="jd-descrdiv">Create reply at company
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#createTopicAtCompany(java.lang.String, org.mule.module.getsatisfaction.model.Topic)">createTopicAtCompany</a></span>(String companyId, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a> topic)</nobr>
+        
+        <div class="jd-descrdiv">Create topic at company
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
             
             
             
@@ -1354,7 +1478,7 @@ From class
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getProductsByCompany(java.lang.String)">getProductsByCompany</a></span>(String company)</nobr>
@@ -1374,10 +1498,10 @@ From class
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getReplies(org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)">getReplies</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getReplies</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
         
         <div class="jd-descrdiv">Get all replies
  <p/>
@@ -1394,10 +1518,10 @@ From class
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getRepliesByTopic(java.lang.String, org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByTopic</a></span>(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getRepliesByTopic(java.lang.String, org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByTopic</a></span>(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
         
         <div class="jd-descrdiv">Get all replies for a topic
  <p/>
@@ -1414,10 +1538,10 @@ From class
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getRepliesByUser(java.lang.String, org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByUser</a></span>(String userId, <a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getRepliesByUser(java.lang.String, org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getRepliesByUser</a></span>(String userId, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
         
         <div class="jd-descrdiv">Get all replies made by a user
  <p/>
@@ -1450,7 +1574,7 @@ From class
             
             
             
-            String</nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopic(java.lang.String)">getTopic</a></span>(String idOrSlug)</nobr>
@@ -1470,7 +1594,7 @@ From class
             
             
             
-            String</nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicByCompany(java.lang.String, java.lang.String)">getTopicByCompany</a></span>(String company, String idOrSlug)</nobr>
@@ -1490,10 +1614,10 @@ From class
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopics(java.lang.String, org.mule.module.getsatisfaction.SortCriteria, org.mule.module.getsatisfaction.Style, java.lang.Long, java.lang.String, java.util.List<java.lang.String>, java.lang.String, java.util.List<org.mule.module.getsatisfaction.Status>, java.util.List<java.lang.String>)">getTopics</a></span>(String search, <a href="../../../../../../java/org/mule/module/getsatisfaction/SortCriteria.html">SortCriteria</a> sortBy, <a href="../../../../../../java/org/mule/module/getsatisfaction/Style.html">Style</a> style, Long activeSince, String userId, List&lt;String&gt; products, String tag, List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/Status.html">Status</a>&gt; status, List&lt;String&gt; userDefinedCodes)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopics(java.lang.String, org.mule.module.getsatisfaction.model.SortCriteria, org.mule.module.getsatisfaction.model.Style, java.lang.Long, java.lang.String, java.util.List<java.lang.String>, java.lang.String, java.util.List<org.mule.module.getsatisfaction.model.Status>, java.util.List<java.lang.String>)">getTopics</a></span>(String search, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/SortCriteria.html">SortCriteria</a> sortBy, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Style.html">Style</a> style, Long activeSince, String userId, List&lt;String&gt; products, String tag, List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Status.html">Status</a>&gt; status, List&lt;String&gt; userDefinedCodes)</nobr>
         
         <div class="jd-descrdiv">Get all topics in all public Get Satisfaction communities
  <p/>
@@ -1510,7 +1634,7 @@ From class
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicsByCompany(java.lang.String)">getTopicsByCompany</a></span>(String company)</nobr>
@@ -1530,7 +1654,7 @@ From class
             
             
             
-            String</nobr>
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicsByCompanyAndProduct(java.lang.String, java.lang.String)">getTopicsByCompanyAndProduct</a></span>(String company, String product)</nobr>
@@ -1670,6 +1794,126 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setUid(java.lang.String)">setUid</a></span>(String uid)</nobr>
         
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformJsonToProducts(java.lang.String)">transformJsonToProducts</a></span>(String json)</nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a list of products
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformJsonToReplies(java.lang.String)">transformJsonToReplies</a></span>(String json)</nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a list of replies
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformJsonToTopic(java.lang.String)">transformJsonToTopic</a></span>(String json)</nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a topic
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformJsonToTopics(java.lang.String)">transformJsonToTopics</a></span>(String json)</nobr>
+        
+        <div class="jd-descrdiv">Transform JSON to a list of topics
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformReplyToJson(org.mule.module.getsatisfaction.model.Reply)">transformReplyToJson</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a> reply)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> object
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformTopicToJson(org.mule.module.getsatisfaction.model.Topic)">transformTopicToJson</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a> topic)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> object
+ <p/>
+ </div>
+  
   </td></tr>
 
 
@@ -1926,6 +2170,48 @@ From interface
 
 <tr class="api apilevel-" >
 <td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.context.MuleContextAware" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.api.context.MuleContextAware-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  org.mule.api.context.MuleContextAware
+
+<div id="inherited-methods-org.mule.api.context.MuleContextAware">
+  <div id="inherited-methods-org.mule.api.context.MuleContextAware-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.api.context.MuleContextAware-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">setMuleContext</span>(MuleContext arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.lifecycle.Disposable" class="jd-expando-trigger closed"
           ><img id="inherited-methods-org.mule.api.lifecycle.Disposable-trigger"
           src="../../../../../../assets/images/triangle-closed.png"
@@ -2123,6 +2409,36 @@ From interface
 
 
 
+<A NAME="muleContext"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+         
+         
+        MuleContext
+      </span>
+        muleContext
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
 <A NAME="responseTimeout"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -2208,7 +2524,7 @@ From interface
 
 
 
-<A NAME="getProductsByCompany(java.lang.String)"></A>
+<A NAME="createReplyForTopic(java.lang.String, org.mule.module.getsatisfaction.model.Reply)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2219,6 +2535,124 @@ From interface
          
          
         String
+      </span>
+      <span class="sympad">createReplyForTopic</span>
+      <span class="normal">(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a> reply)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create reply at company
+ <p/>
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>idOrSlug</td>
+          <td>Topic Id or Slug</td>
+        </tr>
+        <tr>
+          <th>reply</td>
+          <td>Reply to reply</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A JSON representing a reply</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createTopicAtCompany(java.lang.String, org.mule.module.getsatisfaction.model.Topic)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">createTopicAtCompany</span>
+      <span class="normal">(String companyId, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a> topic)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create topic at company
+ <p/>
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>companyId</td>
+          <td>Company Id</td>
+        </tr>
+        <tr>
+          <th>topic</td>
+          <td>Topic to create</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A JSON representing a reply</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getProductsByCompany(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a>&gt;
       </span>
       <span class="sympad">getProductsByCompany</span>
       <span class="normal">(String company)</span>
@@ -2263,7 +2697,7 @@ From interface
 </div>
 
 
-<A NAME="getReplies(org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)"></A>
+<A NAME="getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2273,10 +2707,10 @@ From interface
          
          
          
-        String
+        List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;
       </span>
       <span class="sympad">getReplies</span>
-      <span class="normal">(<a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</span>
+      <span class="normal">(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2322,7 +2756,7 @@ From interface
 </div>
 
 
-<A NAME="getRepliesByTopic(java.lang.String, org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)"></A>
+<A NAME="getRepliesByTopic(java.lang.String, org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2332,10 +2766,10 @@ From interface
          
          
          
-        String
+        List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;
       </span>
       <span class="sympad">getRepliesByTopic</span>
-      <span class="normal">(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</span>
+      <span class="normal">(String idOrSlug, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2385,7 +2819,7 @@ From interface
 </div>
 
 
-<A NAME="getRepliesByUser(java.lang.String, org.mule.module.getsatisfaction.ReplyFilterCriteria, java.lang.Boolean)"></A>
+<A NAME="getRepliesByUser(java.lang.String, org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2395,10 +2829,10 @@ From interface
          
          
          
-        String
+        List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;
       </span>
       <span class="sympad">getRepliesByUser</span>
-      <span class="normal">(String userId, <a href="../../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</span>
+      <span class="normal">(String userId, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2458,7 +2892,7 @@ From interface
          
          
          
-        String
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>
       </span>
       <span class="sympad">getTopic</span>
       <span class="normal">(String idOrSlug)</span>
@@ -2513,7 +2947,7 @@ From interface
          
          
          
-        String
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>
       </span>
       <span class="sympad">getTopicByCompany</span>
       <span class="normal">(String company, String idOrSlug)</span>
@@ -2562,7 +2996,7 @@ From interface
 </div>
 
 
-<A NAME="getTopics(java.lang.String, org.mule.module.getsatisfaction.SortCriteria, org.mule.module.getsatisfaction.Style, java.lang.Long, java.lang.String, java.util.List<java.lang.String>, java.lang.String, java.util.List<org.mule.module.getsatisfaction.Status>, java.util.List<java.lang.String>)"></A>
+<A NAME="getTopics(java.lang.String, org.mule.module.getsatisfaction.model.SortCriteria, org.mule.module.getsatisfaction.model.Style, java.lang.Long, java.lang.String, java.util.List<java.lang.String>, java.lang.String, java.util.List<org.mule.module.getsatisfaction.model.Status>, java.util.List<java.lang.String>)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2572,10 +3006,10 @@ From interface
          
          
          
-        String
+        List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;
       </span>
       <span class="sympad">getTopics</span>
-      <span class="normal">(String search, <a href="../../../../../../java/org/mule/module/getsatisfaction/SortCriteria.html">SortCriteria</a> sortBy, <a href="../../../../../../java/org/mule/module/getsatisfaction/Style.html">Style</a> style, Long activeSince, String userId, List&lt;String&gt; products, String tag, List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/Status.html">Status</a>&gt; status, List&lt;String&gt; userDefinedCodes)</span>
+      <span class="normal">(String search, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/SortCriteria.html">SortCriteria</a> sortBy, <a href="../../../../../../java/org/mule/module/getsatisfaction/model/Style.html">Style</a> style, Long activeSince, String userId, List&lt;String&gt; products, String tag, List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Status.html">Status</a>&gt; status, List&lt;String&gt; userDefinedCodes)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2659,7 +3093,7 @@ From interface
          
          
          
-        String
+        List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;
       </span>
       <span class="sympad">getTopicsByCompany</span>
       <span class="normal">(String company)</span>
@@ -2714,7 +3148,7 @@ From interface
          
          
          
-        String
+        List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;
       </span>
       <span class="sympad">getTopicsByCompanyAndProduct</span>
       <span class="normal">(String company, String product)</span>
@@ -2789,6 +3223,46 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="setMuleContext(org.mule.api.MuleContext)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setMuleContext</span>
+      <span class="normal">(MuleContext context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>

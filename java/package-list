@@ -1,6 +1,8 @@
 org.mule.module.getsatisfaction
 org.mule.module.getsatisfaction.adapters
 org.mule.module.getsatisfaction.config
+org.mule.module.getsatisfaction.model
+org.mule.module.getsatisfaction.model.transformers
 org.mule.module.getsatisfaction.processors
 org.mule.module.getsatisfaction.transformers
 
