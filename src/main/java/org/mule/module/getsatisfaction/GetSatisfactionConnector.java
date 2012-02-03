@@ -15,8 +15,9 @@ import net.oauth.OAuthException;
 import org.apache.commons.httpclient.Cookie;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
-import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 import org.mule.api.ConnectionException;
 import org.mule.api.ConnectionExceptionCode;
 import org.mule.api.annotations.Configurable;
@@ -25,13 +26,24 @@ import org.mule.api.annotations.ConnectionIdentifier;
 import org.mule.api.annotations.Connector;
 import org.mule.api.annotations.Disconnect;
 import org.mule.api.annotations.Processor;
+import org.mule.api.annotations.Transformer;
 import org.mule.api.annotations.ValidateConnection;
 import org.mule.api.annotations.param.ConnectionKey;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 import org.mule.api.annotations.rest.RestCall;
+import org.mule.api.annotations.rest.RestExceptionOn;
 import org.mule.api.annotations.rest.RestHttpClient;
+import org.mule.api.annotations.rest.RestQueryParam;
 import org.mule.api.annotations.rest.RestUriParam;
+import org.mule.module.getsatisfaction.model.Product;
+import org.mule.module.getsatisfaction.model.Reply;
+import org.mule.module.getsatisfaction.model.ReplyFilterCriteria;
+import org.mule.module.getsatisfaction.model.SearchResults;
+import org.mule.module.getsatisfaction.model.SortCriteria;
+import org.mule.module.getsatisfaction.model.Status;
+import org.mule.module.getsatisfaction.model.Style;
+import org.mule.module.getsatisfaction.model.Topic;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -92,12 +104,10 @@ public abstract class GetSatisfactionConnector {
         this.uid = uid;
         this.fullName = fullName;
 
-        HttpClient httpClient = new HttpClient();
-        httpClient.getParams().setCookiePolicy(CookiePolicy.BROWSER_COMPATIBILITY);
-
         String url = null;
         try {
-            url = "http://getsatisfaction.com/mulesoft?fastpass=" + URLEncoder.encode(FastPass.url(getKey(), getSecret(), getEmail(), getFullName(), getUid()), "UTF-8");
+            String fastpass = URLEncoder.encode(FastPass.url(getKey(), getSecret(), getEmail(), getFullName(), getUid()), "UTF-8");
+            url = "http://getsatisfaction.com/mulesoft?fastpass=" + fastpass;
         } catch (OAuthException e) {
             throw new ConnectionException(ConnectionExceptionCode.UNKNOWN, "", e.getMessage(), e);
         } catch (IOException e) {
@@ -116,6 +126,7 @@ public abstract class GetSatisfactionConnector {
             throw new ConnectionException(ConnectionExceptionCode.UNKNOWN, "", e.getMessage(), e);
         }
     }
+
 
     /**
      * Disconnect
@@ -170,7 +181,8 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/topic/{idOrSlug}.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getTopic(@RestUriParam("idOrSlug") String idOrSlug) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract Topic getTopic(@RestUriParam("idOrSlug") String idOrSlug) throws IOException;
 
     /**
      * Get all topics in all public Get Satisfaction communities
@@ -191,15 +203,16 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/topics.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getTopics(@RestUriParam("search") @Optional String search,
-                                     @RestUriParam("sort") @Optional SortCriteria sortBy,
-                                     @RestUriParam("style") @Optional Style style,
-                                     @RestUriParam("active_since") @Optional Long activeSince,
-                                     @RestUriParam("user_id") @Optional String userId,
-                                     @RestUriParam(value = "product", separatedBy = ",") @Optional List<String> products,
-                                     @RestUriParam("tag") @Optional String tag,
-                                     @RestUriParam(value = "status", separatedBy = ",") @Optional List<Status> status,
-                                     @RestUriParam(value = "user_defined_code", separatedBy = ",") @Optional List<String> userDefinedCodes) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract List<Topic> getTopics(@RestQueryParam("search") @Optional String search,
+                                          @RestQueryParam("sort") @Optional SortCriteria sortBy,
+                                          @RestQueryParam("style") @Optional Style style,
+                                          @RestQueryParam("active_since") @Optional Long activeSince,
+                                          @RestQueryParam("user_id") @Optional String userId,
+                                          @RestQueryParam(value = "product", separatedBy = ",") @Optional List<String> products,
+                                          @RestQueryParam("tag") @Optional String tag,
+                                          @RestQueryParam(value = "status", separatedBy = ",") @Optional List<Status> status,
+                                          @RestQueryParam(value = "user_defined_code", separatedBy = ",") @Optional List<String> userDefinedCodes) throws IOException;
 
     /**
      * Get a topic in a particular community
@@ -213,7 +226,8 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/topics/{idOrSlug}.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getTopicByCompany(@RestUriParam("company") String company, @RestUriParam("idOrSlug") String idOrSlug) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract Topic getTopicByCompany(@RestUriParam("company") String company, @RestUriParam("idOrSlug") String idOrSlug) throws IOException;
 
     /**
      * Get all topics in a particular community
@@ -226,7 +240,8 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/topics.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getTopicsByCompany(@RestUriParam("company") String company) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract List<Topic> getTopicsByCompany(@RestUriParam("company") String company) throws IOException;
 
     /**
      * Get all topics in a particular community for a specific product
@@ -240,7 +255,8 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/products/{product}/topics.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getTopicsByCompanyAndProduct(@RestUriParam("company") String company, @RestUriParam("product") String product) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract List<Topic> getTopicsByCompanyAndProduct(@RestUriParam("company") String company, @RestUriParam("product") String product) throws IOException;
 
     /**
      * Get all products in a particular community
@@ -253,7 +269,8 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/products.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getProductsByCompany(@RestUriParam("company") String company) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract List<Product> getProductsByCompany(@RestUriParam("company") String company) throws IOException;
 
     /**
      * Get all replies
@@ -267,8 +284,9 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/replies.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getReplies(@RestUriParam("filter") @Optional ReplyFilterCriteria filterBy,
-                                      @RestUriParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract List<Reply> getReplies(@RestQueryParam("filter") @Optional ReplyFilterCriteria filterBy,
+                                           @RestQueryParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
 
     /**
      * Get all replies for a topic
@@ -283,9 +301,10 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/topics/{idOrSlug}/replies.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getRepliesByTopic(@RestUriParam("idOrSlug") String idOrSlug,
-                                             @RestUriParam("filter") @Optional ReplyFilterCriteria filterBy,
-                                             @RestUriParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract List<Reply> getRepliesByTopic(@RestUriParam("idOrSlug") String idOrSlug,
+                                                  @RestQueryParam("filter") @Optional ReplyFilterCriteria filterBy,
+                                                  @RestQueryParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
 
     /**
      * Get all replies made by a user
@@ -300,10 +319,154 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/people/{userId}/replies.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    public abstract String getRepliesByUser(@RestUriParam("userId") String userId,
-                                            @RestUriParam("filter") @Optional ReplyFilterCriteria filterBy,
-                                            @RestUriParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
+    @RestExceptionOn(statusCodeIsNot = {200})
+    public abstract List<Reply> getRepliesByUser(@RestUriParam("userId") String userId,
+                                                 @RestQueryParam("filter") @Optional ReplyFilterCriteria filterBy,
+                                                 @RestQueryParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
 
+    /**
+     * Create topic at company
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:create-topic-at-company}
+     *
+     * @param companyId Company Id
+     * @param topic     Topic to create
+     * @return A JSON representing a reply
+     * @throws IOException If there is a communication error
+     */
+    @Processor
+    @RestCall(uri = "http://api.getsatisfaction.com/companies/{companyId}/topics",
+            method = org.mule.api.annotations.rest.HttpMethod.POST,
+            contentType = "application/json")
+    @RestExceptionOn(statusCodeIsNot = {200, 201, 202})
+    public abstract String createTopicAtCompany(@RestUriParam("companyId") String companyId,
+                                                Topic topic) throws IOException;
+
+    /**
+     * Create reply at company
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:create-reply-for-topic}
+     *
+     * @param idOrSlug  Topic Id or Slug
+     * @param reply     Reply to reply
+     * @return A JSON representing a reply
+     * @throws IOException If there is a communication error
+     */
+    @Processor
+    @RestCall(uri = "http://api.getsatisfaction.com/topics/{idOrSlug}/replies",
+            method = org.mule.api.annotations.rest.HttpMethod.POST,
+            contentType = "application/json")
+    @RestExceptionOn(statusCodeIsNot = {200, 201, 202})
+    public abstract String createReplyForTopic(@RestUriParam("idOrSlug") String idOrSlug,
+                                               Reply reply) throws IOException;
+
+
+    /**
+     * Create a JSON representation of a {@link Topic} object
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-topic-to-json}
+     *
+     * @param topic Topic to transform
+     * @return A JSON representation of a {@link Topic} object
+     * @throws IOException
+     */
+    @Transformer(sourceTypes = {Topic.class})
+    public static String transformTopicToJson(Topic topic) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+
+        return "{ \"topic\": " + mapper.writeValueAsString(topic) + " }";
+    }
+
+    /**
+     * Create a JSON representation of a {@link Reply} object
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-reply-to-json}
+     *
+     * @param reply Reply to transform
+     * @return A JSON representation of a {@link Reply} object
+     * @throws IOException
+     */
+    @Transformer(sourceTypes = {Reply.class})
+    public static String transformReplyToJson(Reply reply) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+
+        return "{ \"reply\": " + mapper.writeValueAsString(reply) + " }";
+    }
+
+    /**
+     * Transform JSON to a list of topics
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-json-to-topics}
+     *
+     * @param json JSON string to transform
+     * @return A list of {@link Topic} object
+     * @throws IOException
+     */
+    @Transformer(sourceTypes = {String.class})
+    public static List<Topic> transformJsonToTopics(String json) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+
+        SearchResults<List<Topic>> result = mapper.readValue(json, new TypeReference<SearchResults<List<Topic>>>() {
+        });
+
+        return result.getData();
+    }
+
+    /**
+     * Transform JSON to a topic
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-json-to-topic}
+     *
+     * @param json JSON string to transform
+     * @return A {@link Topic} object
+     * @throws IOException
+     */
+    @Transformer(sourceTypes = {String.class})
+    public static Topic transformJsonToTopic(String json) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+
+        Topic result = mapper.readValue(json, Topic.class);
+
+        return result;
+    }
+
+    /**
+     * Transform JSON to a list of products
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-json-to-products}
+     *
+     * @param json JSON string to transform
+     * @return A list of {@link Product} object
+     * @throws IOException
+     */
+    @Transformer(sourceTypes = {String.class})
+    public static List<Product> transformJsonToProducts(String json) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+
+        SearchResults<List<Product>> result = mapper.readValue(json, new TypeReference<SearchResults<List<Product>>>() {
+        });
+
+        return result.getData();
+    }
+
+    /**
+     * Transform JSON to a list of replies
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-json-to-replies}
+     *
+     * @param json JSON string to transform
+     * @return A list of {@link Reply} object
+     * @throws IOException
+     */
+    @Transformer(sourceTypes = {String.class})
+    public static List<Reply> transformJsonToReplies(String json) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+
+        SearchResults<List<Reply>> result = mapper.readValue(json, new TypeReference<SearchResults<List<Reply>>>() {
+        });
+
+        return result.getData();
+    }
 
     public String getKey() {
         return key;

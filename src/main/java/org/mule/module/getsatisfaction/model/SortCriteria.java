@@ -8,7 +8,7 @@
  * LICENSE.txt file.
  */
 
-package org.mule.module.getsatisfaction;
+package org.mule.module.getsatisfaction.model;
 
 public enum SortCriteria {
     /**

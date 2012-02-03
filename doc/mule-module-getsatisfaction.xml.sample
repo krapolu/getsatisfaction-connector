@@ -25,3 +25,35 @@
 <!-- BEGIN_INCLUDE(getsatisfaction:get-replies-by-user) -->
 <getsatisfaction:get-replies-by-user userId="001"/>
 <!-- END_INCLUDE(getsatisfaction:get-replies-by-user) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:create-topic-at-company) -->
+<getsatisfaction:create-topic-at-company companyId="mulesoft" subject="test for product affiliate" style="PRAISE"
+                                         additionalDetail="additional detail goes here">
+    <getsatisfaction:keywords>
+        <getsatisfaction:keyword>keyword</getsatisfaction:keyword>
+    </getsatisfaction:keywords>
+    <getsatisfaction:products>
+        <getsatisfaction:product>muleion</getsatisfaction:product>
+    </getsatisfaction:products>
+</getsatisfaction:create-topic-at-company>
+<!-- END_INCLUDE(getsatisfaction:create-topic-at-company) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:create-reply-for-topic) -->
+<getsatisfaction:create-reply-for-topic companyId="mulesoft" idOrSlug="001" reply-ref=""/>
+<!-- END_INCLUDE(getsatisfaction:transform-reply-for-topic) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-json-to-topic) -->
+<getsatisfaction:transform-json-to-topic/>
+<!-- END_INCLUDE(getsatisfaction:transform-json-to-topic) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-json-to-topics) -->
+<getsatisfaction:transform-json-to-topics/>
+<!-- END_INCLUDE(getsatisfaction:transform-json-to-topics) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-json-to-replies) -->
+<getsatisfaction:transform-json-to-replies/>
+<!-- END_INCLUDE(getsatisfaction:transform-json-to-replies) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-json-to-products) -->
+<getsatisfaction:transform-json-to-products/>
+<!-- END_INCLUDE(getsatisfaction:transform-json-to-products) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-topic-to-json) -->
+<getsatisfaction:transform-topic-to-json/>
+<!-- END_INCLUDE(getsatisfaction:transform-topic-to-json) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-reply-to-json) -->
+<getsatisfaction:transform-reply-to-json/>
+<!-- END_INCLUDE(getsatisfaction:transform-reply-to-json) -->

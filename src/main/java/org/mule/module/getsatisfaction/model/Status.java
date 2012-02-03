@@ -8,25 +8,33 @@
  * LICENSE.txt file.
  */
 
-package org.mule.module.getsatisfaction;
+package org.mule.module.getsatisfaction.model;
 
-public enum ReplyFilterCriteria {
+public enum Status {
     /**
-     * Return promoted replies (both star promoted and company chosen replies)
+     * None
      */
-    BEST("best"),
+    NONE("question"),
     /**
-     * Return only star promoted replies
+     * Pending
      */
-    STAR_PROMOTED("star_promoted"),
+    PENDING("pending"),
     /**
-     * Return only company promoted replies
+     * Active
      */
-    COMPANY_PROMOTED("company_promoted");
+    ACTIVE("active"),
+    /**
+     * Complete
+     */
+    COMPLETE("complete"),
+    /**
+     * Rejected
+     */
+    REJECTED("rejected");
 
     private String code;
 
-    private ReplyFilterCriteria(String code) {
+    private Status(String code) {
         this.code = code;
     }
 

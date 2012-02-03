@@ -8,33 +8,33 @@
  * LICENSE.txt file.
  */
 
-package org.mule.module.getsatisfaction;
+package org.mule.module.getsatisfaction.model;
 
-public enum Status {
+public enum Style {
     /**
-     * None
+     * Question
      */
-    NONE("question"),
+    QUESTION("question"),
     /**
-     * Pending
+     * Problem
      */
-    PENDING("pending"),
+    PROBLEM("problem"),
     /**
-     * Active
+     * Praise
      */
-    ACTIVE("active"),
+    PRAISE("praise"),
     /**
-     * Complete
+     * Idea
      */
-    COMPLETE("complete"),
+    IDEA("idea"),
     /**
-     * Rejected
+     * Update
      */
-    REJECTED("rejected");
+    UPDATE("update");
 
     private String code;
 
-    private Status(String code) {
+    private Style(String code) {
         this.code = code;
     }
 

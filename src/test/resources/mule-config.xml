@@ -27,11 +27,25 @@
         http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
         http://www.mulesoft.org/schema/mule/getsatisfaction http://www.mulesoft.org/schema/mule/getsatisfaction/current/mule-getsatisfaction.xsd">
 
-    <getsatisfaction:config key="1fjo088bougl" secret="aqfi8q65z031wlhqsrj37rhuv1qlwy78" email="mariano.capurro@mulesoft.com" uid="mariano.capurro" fullName="Mariano Capurro"/>
+    <getsatisfaction:config key="1fjo088bougl" secret="aqfi8q65z031wlhqsrj37rhuv1qlwy78"
+                            email="emiliano.lesende@mulesoft.com" uid="emiliano.lesende" fullName="Emiliano Lesende"/>
+
+    <spring:beans>
+        <spring:bean id="myTopic" class="org.mule.module.getsatisfaction.model.Topic">
+            <spring:property name="subject" value="My Subject"/>
+            <spring:property name="content" value="This is the content for My Subject"/>
+            <spring:property name="style" value="IDEA"/>
+        </spring:bean>
+    </spring:beans>
+
+    <spring:beans>
+        <spring:bean id="myReply" class="org.mule.module.getsatisfaction.model.Reply">
+            <spring:property name="content" value="This is the content for My Reply"/>
+        </spring:bean>
+    </spring:beans>
 
     <flow name="test">
-        <getsatisfaction:get-topics sortBy="MOST_REPLIES"/>
-        <logger level="INFO" message="#[payload]"/>
+        <getsatisfaction:create-reply-for-topic idOrSlug="my_subject-xh8t1" reply-ref="myReply"/>
     </flow>
 
 </mule>
