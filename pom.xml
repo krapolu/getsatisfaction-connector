@@ -30,15 +30,11 @@
         	<groupId>com.gsfn</groupId>
         	<artifactId>fastpass</artifactId>
         	<version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/fastpass.jar</systemPath>
         </dependency>        
         <dependency>
         	<groupId>com.gsfn</groupId>
         	<artifactId>oauth-core</artifactId>
         	<version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/oauth-core.jar</systemPath>
         </dependency>
     </dependencies>
 
@@ -55,6 +51,10 @@
             <url>http://repository.mulesoft.org/snapshots/</url>
             <layout>default</layout>
         </repository>
+		  <repository>
+		    <id>custom-repo</id>
+		    <url>file://${basedir}/lib</url>
+		  </repository>
     </repositories>
 
     <pluginRepositories>
