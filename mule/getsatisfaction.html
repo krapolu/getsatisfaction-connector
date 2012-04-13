@@ -64,6 +64,8 @@
 
 
 
+
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -85,6 +87,7 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
 <script src="../assets/search_autocomplete.js" type="text/javascript"></script>
 <script src="../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../assets/jquery-toc.js" type="text/javascript"></script>
 <script src="../assets/mule-developer-docs.js" type="text/javascript"></script>
 <script src="../assets/prettify.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -101,6 +104,27 @@
     #resize-packages-nav{border-bottom:3px solid #666;}
   </style>
 </noscript>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";
+  feedback_widget_options.company = "mulesoft";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#2F74AE";
+  feedback_widget_options.style = "question";
+
+  feedback_widget_options.tag = "Mule GetSatisfaction Connector";
+
+  feedback_widget_options.limit = "3";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
 </head>
 
 <body class="">
@@ -198,7 +222,6 @@ Summary:
 <div id="jd-header">
     org.mule.modules
 <h1>mule-module-getsatisfaction</h1>
-    1.0-SNAPSHOT
 
 </div><!-- end header -->
 
@@ -207,15 +230,17 @@ Summary:
 <div id="jd-content" class="api apilevel-">
 
 
+<br/>
+
 <div class="jd-tagdata">
       <table class="jd-tagtable">
         <tbody><tr>
           <th>Namespace</th><td>http://www.mulesoft.org/schema/mule/getsatisfaction</td>
         </tr><tr>
-          <th>Schema Location</th><td>http://www.mulesoft.org/schema/mule/getsatisfaction/1.0/mule-getsatisfaction.xsd</td>
+          <th>Schema Location</th><td>http://www.mulesoft.org/schema/mule/getsatisfaction/current/mule-getsatisfaction.xsd&nbsp;&nbsp;(<a href="getsatisfaction-schema.html">View Schema</a>)</td>
         </tr>
 <tr>
-          <th>Version</th><td>1.0</td>
+          <th>Schema Version</th><td>1.0</td>
         </tr>
 <tr>
           <th>Minimum Mule Version</th><td>3.2</td>
@@ -275,7 +300,7 @@ Summary:
         
         <div class="jd-descrdiv">Create reply at company
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -287,7 +312,7 @@ Summary:
         
         <div class="jd-descrdiv">Create topic at company
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -299,7 +324,7 @@ Summary:
         
         <div class="jd-descrdiv">Get all products in a particular community
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -311,7 +336,7 @@ Summary:
         
         <div class="jd-descrdiv">Get all replies
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -323,7 +348,7 @@ Summary:
         
         <div class="jd-descrdiv">Get all replies for a topic
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -335,7 +360,7 @@ Summary:
         
         <div class="jd-descrdiv">Get all replies made by a user
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -347,7 +372,7 @@ Summary:
         
         <div class="jd-descrdiv">Get a specific topic
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -359,7 +384,7 @@ Summary:
         
         <div class="jd-descrdiv">Get a topic in a particular community
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -371,7 +396,7 @@ Summary:
         
         <div class="jd-descrdiv">Get all topics in all public Get Satisfaction communities
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -383,7 +408,7 @@ Summary:
         
         <div class="jd-descrdiv">Get all topics in a particular community
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -395,7 +420,7 @@ Summary:
         
         <div class="jd-descrdiv">Get all topics in a particular community for a specific product
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -420,7 +445,7 @@ Summary:
         
         <div class="jd-descrdiv">Transform JSON to a list of products
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -432,7 +457,7 @@ Summary:
         
         <div class="jd-descrdiv">Transform JSON to a list of replies
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -444,7 +469,7 @@ Summary:
         
         <div class="jd-descrdiv">Transform JSON to a topic
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -456,7 +481,7 @@ Summary:
         
         <div class="jd-descrdiv">Transform JSON to a list of topics
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -466,9 +491,9 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../mule/getsatisfaction.html#transform-reply-to-json">&lt;getsatisfaction:transform-reply-to-json&gt;</a></nobr>
         
-        <div class="jd-descrdiv">Create a JSON representation of a <br/><code><a href="../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> object
+        <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> object
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -478,9 +503,9 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../mule/getsatisfaction.html#transform-topic-to-json">&lt;getsatisfaction:transform-topic-to-json&gt;</a></nobr>
         
-        <div class="jd-descrdiv">Create a JSON representation of a <br/><code><a href="../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> object
+        <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> object
  <p/>
- <br/></div>
+ </div>
         
   </td></tr>
 
@@ -492,7 +517,6 @@ Summary:
 
 
 </div><!-- jd-descr (summary) -->
-
 
 
 <!-- ========= CONFIGURATION DETAIL ======== -->
@@ -508,14 +532,15 @@ similar to the following:</p>
                http://www.mulesoft.org/schema/mule/core
                http://www.mulesoft.org/schema/mule/core/current/mule.xsd
                http://www.mulesoft.org/schema/mule/getsatisfaction
-               http://www.mulesoft.org/schema/mule/getsatisfaction/1.0/mule-getsatisfaction.xsd"&gt;
+               http://www.mulesoft.org/schema/mule/getsatisfaction/current/mule-getsatisfaction.xsd"&gt;
 
       &lt;!-- here goes your flows and configuration elements --&gt;
 
 &lt;/mule&gt;
 </pre>
+
 <p>This module is configured using the <i>config</i> element. This element must be placed outside of your flows and at
-the root of your Mule application. You can create as many configurations as you deem necesary as long as each carries
+the root of your Mule application. You can create as many configurations as you deem necessary as long as each carries
 its own name.</p>
 <p>Each message processor, message source or transformer carries a <i>config-ref</i> attribute that allows the invoker to
 specify which configuration to use.</p>
@@ -549,6 +574,7 @@ specify which configuration to use.</p>
       
     
 </table>
+
 
 
 
@@ -714,10 +740,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -838,10 +866,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -943,10 +973,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -996,7 +1028,7 @@ attribute on each operation.</p>
                 
                 <tr class="alt-color api apilevel-" >
                     <td class="jd-linkcol"><nobr>includeComments</nobr></td>
-                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol">false</td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Ixclude comments from the returned replies</td>
                 </tr>
                 
@@ -1059,10 +1091,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -1121,7 +1155,7 @@ attribute on each operation.</p>
                 
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>includeComments</nobr></td>
-                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol">false</td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Ixclude comments from the returned replies</td>
                 </tr>
                 
@@ -1186,10 +1220,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -1248,7 +1284,7 @@ attribute on each operation.</p>
                 
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>includeComments</nobr></td>
-                    <td class="jd-descrcol"></td>
+                    <td class="jd-descrcol">false</td>
                     <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Ixclude comments from the returned replies</td>
                 </tr>
                 
@@ -1313,10 +1349,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -1418,10 +1456,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -1534,10 +1574,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -1701,7 +1743,7 @@ attribute on each operation.</p>
             
           
             
-            <tr><th colspan="12"><nobr>&lt;getsatisfaction:userDefinedCodes&gt;</nobr></br><span style="font-weight: normal;"><i>Optional.&nbsp;</i>Filter by User Defined Code (in communities with UDCs enabled)</span></th></tr>
+            <tr><th colspan="12"><nobr>&lt;getsatisfaction:user-defined-codes&gt;</nobr></br><span style="font-weight: normal;"><i>Optional.&nbsp;</i>Filter by User Defined Code (in communities with UDCs enabled)</span></th></tr>
             
             
           
@@ -1715,10 +1757,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -1820,10 +1864,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>
@@ -1936,10 +1982,12 @@ attribute on each operation.</p>
     
   
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Exception Payload</h5>
-      <table class="jd-tagtable">
+      <h5 class="jd-tagtitle">Exception Payloads</h5>
+      <table class="jd-sumtable">
+        <tr><th>Payload Class</th><th>Description</th></tr>
+        
         <tr>
-            <th>IOException</td>
+            <td>IOException</td>
             <td>If there is a communication error
 </td>
         </tr>

@@ -15,7 +15,7 @@ var DATA = [
       { id:13, label:"org.mule.module.getsatisfaction.adapters", link:"java/org/mule/module/getsatisfaction/adapters/package-summary.html", type:"package" },
       { id:14, label:"org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorCapabilitiesAdapter", link:"java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorCapabilitiesAdapter.html", type:"class" },
       { id:15, label:"org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorConnectionManager", link:"java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionManager.html", type:"class" },
-      { id:16, label:"org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorConnectionManager.ConnectionParameters", link:"java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionManager.ConnectionParameters.html", type:"class" },
+      { id:16, label:"org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorConnectionManager.ConnectionKey", link:"java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionManager.ConnectionKey.html", type:"class" },
       { id:17, label:"org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorLifecycleAdapter", link:"java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorLifecycleAdapter.html", type:"class" },
       { id:18, label:"org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorRestClientAdapter", link:"java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html", type:"class" },
       { id:19, label:"org.mule.module.getsatisfaction.config", link:"java/org/mule/module/getsatisfaction/config/package-summary.html", type:"package" },
