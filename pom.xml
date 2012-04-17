@@ -51,10 +51,6 @@
             <url>http://repository.mulesoft.org/snapshots/</url>
             <layout>default</layout>
         </repository>
-		  <repository>
-		    <id>custom-repo</id>
-		    <url>file://${basedir}/lib</url>
-		  </repository>
     </repositories>
 
     <pluginRepositories>
