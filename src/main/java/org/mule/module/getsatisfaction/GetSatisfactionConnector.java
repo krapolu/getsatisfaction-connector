@@ -119,6 +119,12 @@ public abstract class GetSatisfactionConnector {
 
         try {
             int response = httpClient.executeMethod(method);
+            Cookie[] cookies = httpClient.getState().getCookies();
+            httpClient.getState().clearCookies();
+            for( Cookie cookie : cookies ) {
+                cookie.setDomain(".getsatisfaction.com");
+            }
+            httpClient.getState().addCookies(cookies);
             if (response != 200) {
                 throw new ConnectionException(ConnectionExceptionCode.UNKNOWN, Integer.toString(response), "Server Error (Possbile Invalid Credentials)");
             }
