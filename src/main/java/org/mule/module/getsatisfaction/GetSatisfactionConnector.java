@@ -55,7 +55,7 @@ import java.util.List;
  *
  * @author MuleSoft, Inc.
  */
-@Connector(name = "getsatisfaction", schemaVersion = "1.0")
+@Connector(name = "getsatisfaction", schemaVersion = "1.0", friendlyName = "GetSatisfaction")
 public abstract class GetSatisfactionConnector {
     /**
      * FastPass Key
