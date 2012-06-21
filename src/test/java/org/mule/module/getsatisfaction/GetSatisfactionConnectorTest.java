@@ -34,6 +34,14 @@ public class GetSatisfactionConnectorTest extends FunctionalTestCase
         runFlow("test");
     }
 
+    /*
+    @Test
+    public void testQuery() throws Exception
+    {
+        runFlow("testQuery");
+    }
+    */
+
     /**
      * Run the flow specified by name and assert equality on the expected output
      *

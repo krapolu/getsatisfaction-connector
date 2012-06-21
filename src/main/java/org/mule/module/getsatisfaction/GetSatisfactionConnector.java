@@ -220,6 +220,7 @@ public abstract class GetSatisfactionConnector {
                                           @RestQueryParam(value = "status", separatedBy = ",") @Optional List<Status> status,
                                           @RestQueryParam(value = "user_defined_code", separatedBy = ",") @Optional List<String> userDefinedCodes) throws IOException;
 
+
     /**
      * Get a topic in a particular community
      * <p/>
@@ -262,7 +263,11 @@ public abstract class GetSatisfactionConnector {
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/products/{product}/topics.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
     @RestExceptionOn(statusCodeIsNot = {200})
-    public abstract List<Topic> getTopicsByCompanyAndProduct(@RestUriParam("company") String company, @RestUriParam("product") String product) throws IOException;
+    public abstract List<Topic> getTopicsByCompanyAndProduct(@RestUriParam("company") String company,
+                                                             @RestUriParam("product") String product,
+                                                             @RestUriParam("query") @Optional String query) throws IOException;
+
+
 
     /**
      * Get all products in a particular community
