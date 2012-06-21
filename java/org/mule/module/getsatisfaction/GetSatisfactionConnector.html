@@ -956,7 +956,7 @@ Summary:
             List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicsByCompanyAndProduct(java.lang.String, java.lang.String)">getTopicsByCompanyAndProduct</a></span>(String company, String product)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicsByCompanyAndProduct(java.lang.String, java.lang.String, java.lang.String)">getTopicsByCompanyAndProduct</a></span>(String company, String product, String query)</nobr>
         
         <div class="jd-descrdiv">Get all topics in a particular community for a specific product
  <p/>
@@ -2606,7 +2606,7 @@ From class
 </div>
 
 
-<A NAME="getTopicsByCompanyAndProduct(java.lang.String, java.lang.String)"></A>
+<A NAME="getTopicsByCompanyAndProduct(java.lang.String, java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2619,7 +2619,7 @@ From class
         List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt;
       </span>
       <span class="sympad">getTopicsByCompanyAndProduct</span>
-      <span class="normal">(String company, String product)</span>
+      <span class="normal">(String company, String product, String query)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2644,6 +2644,10 @@ From class
         <tr>
           <th>product</td>
           <td>Product Id</td>
+        </tr>
+        <tr>
+          <th>query</td>
+          <td>Query</td>
         </tr>
       </table>
   </div>
