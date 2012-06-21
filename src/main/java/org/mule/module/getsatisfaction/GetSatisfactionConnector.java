@@ -257,6 +257,7 @@ public abstract class GetSatisfactionConnector {
      *
      * @param company Company Id
      * @param product Product Id
+     * @param query Query
      * @return A JSON representing a topic
      * @throws IOException If there is a communication error
      */
