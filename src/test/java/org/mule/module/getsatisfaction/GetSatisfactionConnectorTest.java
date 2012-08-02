@@ -18,6 +18,8 @@ import org.mule.construct.Flow;
 import org.mule.tck.FunctionalTestCase;
 import org.mule.tck.AbstractMuleTestCase;
 
+import java.util.List;
+
 import org.junit.Test;
 
 public class GetSatisfactionConnectorTest extends FunctionalTestCase
@@ -31,27 +33,29 @@ public class GetSatisfactionConnectorTest extends FunctionalTestCase
     @Test
     public void testFlow() throws Exception
     {
-        runFlow("test");
+        MuleEvent event = runFlow("test");
+        assertNotNull(event);
+        assertTrue(event.getMessage().getPayloadAsString().contains("This is the content for My Reply"));
     }
 
-    /*
     @Test
     public void testQuery() throws Exception
     {
-        runFlow("testQuery");
+        MuleEvent event = runFlow("testQuery");
+        assertNotNull(event);
+        assertTrue(event.getMessage().getPayload() instanceof List);
     }
-    */
 
     /**
      * Run the flow specified by name and assert equality on the expected output
      *
      * @param flowName The name of the flow to run
      */
-    protected <T> void runFlow(String flowName) throws Exception
+    protected <T> MuleEvent runFlow(String flowName) throws Exception
     {
         Flow flow = lookupFlowConstruct(flowName);
         MuleEvent event = AbstractMuleTestCase.getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
+        return flow.process(event);
     }
 
     /**

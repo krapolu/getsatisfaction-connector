@@ -45,13 +45,13 @@
     </spring:beans>
 
     <flow name="test">
-        <getsatisfaction:create-reply-for-topic idOrSlug="my_subject-xh8t1" reply-ref="myReply"/>
+        <getsatisfaction:create-reply-for-topic idOrSlug="my_subject-xh8t1" >
+            <getsatisfaction:reply ref="myReply" />
+        </getsatisfaction:create-reply-for-topic>
     </flow>
 
     <flow name="testQuery">
         <getsatisfaction:get-topics-by-company-and-product company="mulesoft" product="71188"/>
-        <logger level="WARN" message="#[payload.getClass().getName()]"/>
-        <logger level="WARN" message="#[payload[1].topicUrl]"/>
     </flow>
 
 </mule>

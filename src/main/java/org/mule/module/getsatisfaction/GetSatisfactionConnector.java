@@ -88,7 +88,7 @@ public abstract class GetSatisfactionConnector {
      * REST Http Client
      */
     @RestHttpClient
-    private HttpClient httpClient;
+    private HttpClient httpClient = new HttpClient();
 
     /**
      * Create a new connection to get satisfaction
@@ -187,7 +187,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/topic/{idOrSlug}.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract Topic getTopic(@RestUriParam("idOrSlug") String idOrSlug) throws IOException;
 
     /**
@@ -209,7 +208,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/topics.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract List<Topic> getTopics(@RestQueryParam("search") @Optional String search,
                                           @RestQueryParam("sort") @Optional SortCriteria sortBy,
                                           @RestQueryParam("style") @Optional Style style,
@@ -233,7 +231,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/topics/{idOrSlug}.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract Topic getTopicByCompany(@RestUriParam("company") String company, @RestUriParam("idOrSlug") String idOrSlug) throws IOException;
 
     /**
@@ -247,7 +244,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/topics.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract List<Topic> getTopicsByCompany(@RestUriParam("company") String company) throws IOException;
 
     /**
@@ -263,7 +259,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/products/{product}/topics.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract List<Topic> getTopicsByCompanyAndProduct(@RestUriParam("company") String company,
                                                              @RestUriParam("product") String product,
                                                              @RestUriParam("query") @Optional String query) throws IOException;
@@ -281,7 +276,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/products.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract List<Product> getProductsByCompany(@RestUriParam("company") String company) throws IOException;
 
     /**
@@ -296,7 +290,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/replies.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract List<Reply> getReplies(@RestQueryParam("filter") @Optional ReplyFilterCriteria filterBy,
                                            @RestQueryParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
 
@@ -313,7 +306,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/topics/{idOrSlug}/replies.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract List<Reply> getRepliesByTopic(@RestUriParam("idOrSlug") String idOrSlug,
                                                   @RestQueryParam("filter") @Optional ReplyFilterCriteria filterBy,
                                                   @RestQueryParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
@@ -331,7 +323,6 @@ public abstract class GetSatisfactionConnector {
      */
     @Processor
     @RestCall(uri = "http://api.getsatisfaction.com/people/{userId}/replies.json", method = org.mule.api.annotations.rest.HttpMethod.GET)
-    @RestExceptionOn(statusCodeIsNot = {200})
     public abstract List<Reply> getRepliesByUser(@RestUriParam("userId") String userId,
                                                  @RestQueryParam("filter") @Optional ReplyFilterCriteria filterBy,
                                                  @RestQueryParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
@@ -350,7 +341,6 @@ public abstract class GetSatisfactionConnector {
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{companyId}/topics",
             method = org.mule.api.annotations.rest.HttpMethod.POST,
             contentType = "application/json")
-    @RestExceptionOn(statusCodeIsNot = {200, 201, 202})
     public abstract String createTopicAtCompany(@RestUriParam("companyId") String companyId,
                                                 Topic topic) throws IOException;
 
@@ -368,7 +358,6 @@ public abstract class GetSatisfactionConnector {
     @RestCall(uri = "http://api.getsatisfaction.com/topics/{idOrSlug}/replies",
             method = org.mule.api.annotations.rest.HttpMethod.POST,
             contentType = "application/json")
-    @RestExceptionOn(statusCodeIsNot = {200, 201, 202})
     public abstract String createReplyForTopic(@RestUriParam("idOrSlug") String idOrSlug,
                                                Reply reply) throws IOException;
 
