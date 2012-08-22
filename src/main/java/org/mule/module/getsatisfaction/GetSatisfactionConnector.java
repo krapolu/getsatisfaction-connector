@@ -369,7 +369,7 @@ public abstract class GetSatisfactionConnector {
      *
      * @param topic Topic to transform
      * @return A JSON representation of a {@link Topic} object
-     * @throws IOException
+     * @throws IOException If there is a transformation error
      */
     @Transformer(sourceTypes = {Topic.class})
     public static String transformTopicToJson(Topic topic) throws IOException {
@@ -385,7 +385,7 @@ public abstract class GetSatisfactionConnector {
      *
      * @param reply Reply to transform
      * @return A JSON representation of a {@link Reply} object
-     * @throws IOException
+     * @throws IOException If there is a transformation error
      */
     @Transformer(sourceTypes = {Reply.class})
     public static String transformReplyToJson(Reply reply) throws IOException {
@@ -401,7 +401,7 @@ public abstract class GetSatisfactionConnector {
      *
      * @param json JSON string to transform
      * @return A list of {@link Topic} object
-     * @throws IOException
+     * @throws IOException If there is a transformation error
      */
     @Transformer(sourceTypes = {String.class})
     public static List<Topic> transformJsonToTopics(String json) throws IOException {
@@ -420,7 +420,7 @@ public abstract class GetSatisfactionConnector {
      *
      * @param json JSON string to transform
      * @return A {@link Topic} object
-     * @throws IOException
+     * @throws IOException If there is a transformation error
      */
     @Transformer(sourceTypes = {String.class})
     public static Topic transformJsonToTopic(String json) throws IOException {
@@ -438,7 +438,7 @@ public abstract class GetSatisfactionConnector {
      *
      * @param json JSON string to transform
      * @return A list of {@link Product} object
-     * @throws IOException
+     * @throws IOException If there is a transformation error
      */
     @Transformer(sourceTypes = {String.class})
     public static List<Product> transformJsonToProducts(String json) throws IOException {
@@ -457,7 +457,7 @@ public abstract class GetSatisfactionConnector {
      *
      * @param json JSON string to transform
      * @return A list of {@link Reply} object
-     * @throws IOException
+     * @throws IOException If there is a transformation error
      */
     @Transformer(sourceTypes = {String.class})
     public static List<Reply> transformJsonToReplies(String json) throws IOException {
