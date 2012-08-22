@@ -959,7 +959,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/processors/AbstractMessageProcessor.html#findOrCreate(java.lang.Class, boolean)">findOrCreate</a></span>(Class moduleClass, boolean shouldAutoCreate)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/processors/AbstractMessageProcessor.html#findOrCreate(java.lang.Class, boolean, org.mule.api.MuleEvent)">findOrCreate</a></span>(Class moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</nobr>
         
         <div class="jd-descrdiv">Obtains the expression manager from the Mule context and initialises the connector.</div>
   
@@ -2065,7 +2065,7 @@ From interface
 
 
 
-<A NAME="findOrCreate(java.lang.Class, boolean)"></A>
+<A NAME="findOrCreate(java.lang.Class, boolean, org.mule.api.MuleEvent)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -2078,7 +2078,7 @@ From interface
         void
       </span>
       <span class="sympad">findOrCreate</span>
-      <span class="normal">(Class moduleClass, boolean shouldAutoCreate)</span>
+      <span class="normal">(Class moduleClass, boolean shouldAutoCreate, MuleEvent muleEvent)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -2100,6 +2100,10 @@ From interface
         </tr>
         <tr>
           <th>shouldAutoCreate</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>muleEvent</td>
           <td></td>
         </tr>
       </table>
