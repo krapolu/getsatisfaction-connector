@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:getsatisfaction="http://www.mulesoft.org/schema/mule/getsatisfaction" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd 
+http://www.mulesoft.org/schema/mule/getsatisfaction http://www.mulesoft.org/schema/mule/getsatisfaction/1.0/mule-getsatisfaction.xsd 
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd 
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd 
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd ">
+    <getsatisfaction:config name="gsconf" uid="emiliano.lesende" email="emiliano.lesende@mulesoft.com" fullName="Emiliano Lesende" key="1fjo088bougl" secret="aqfi8q65z031wlhqsrj37rhuv1qlwy78" doc:name="GetSatisfaction"/>
+	
+    <!--  -->
+    <flow name="Topics_Flow" doc:name="Topics_Flow">
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8090" doc:name="HTTP" path="topics"/>
+        <getsatisfaction:get-topics-by-company config-ref="gsconf" company="mulesoft" doc:name="Get a List of Topic by company"/>
+        <getsatisfaction:transform-gs-object-to-json doc:name="Transform a List of Topic to JSON"/>
+    </flow>
+    <flow name="Products_Flow" doc:name="Products_Flow">
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8090" doc:name="HTTP" path="products"/>
+        <getsatisfaction:get-products-by-company config-ref="gsconf" company="mulesoft" doc:name="Get List of Product by Company"/>
+        <getsatisfaction:transform-gs-object-to-json doc:name="Transform a List of Product to JSON"/>
+    </flow>
+    <flow name="Get_Satisfaction_Connector_DemoFlow1" doc:name="Get_Satisfaction_Connector_DemoFlow1">
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP"/>
+        <getsatisfaction:get-topics config-ref="getsatisconfig" doc:name="GetSatisfaction">
+            <getsatisfaction:products ref="#[payload]"/>
+            <getsatisfaction:status ref="#[payload]"/>
+            <getsatisfaction:user-defined-codes ref="#[payload]"/>
+        </getsatisfaction:get-topics>
+    </flow>
+<!--    <flow name="Create_Topic_Flow" doc:name="Create_Topic_Flow">-->
+<!--        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8090" doc:name="HTTP" path="createtopic"/>-->
+<!--    </flow>-->
+</mule>

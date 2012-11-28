@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:getsatisfaction="http://www.mulesoft.org/schema/mule/getsatisfaction" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd 
+http://www.mulesoft.org/schema/mule/getsatisfaction http://www.mulesoft.org/schema/mule/getsatisfaction/1.0/mule-getsatisfaction.xsd 
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd 
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd ">
+    <getsatisfaction:config name="getsatisconfig" uid="emiliano.lesende" email="emiliano.lesende@mulesoft.com" fullName="Emiliano Lesende" key="1fjo088bougl" secret="aqfi8q65z031wlhqsrj37rhuv1qlwy78" doc:name="GetSatisfaction"/>
+    <flow name="SimpleTestFlow1" doc:name="SimpleTestFlow1">
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8090" doc:name="HTTP"/>
+        <getsatisfaction:get-topics-by-company config-ref="getsatisconfig"  doc:name="GetSatisfaction" company="mulesoft"/>
+        <getsatisfaction:transform-gs-object-to-json doc:name="GetSatisfaction"/>
+    </flow>
+</mule>
