@@ -10,6 +10,7 @@
 
 package org.mule.module.getsatisfaction.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -23,7 +24,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 @JsonSerialize(include=Inclusion.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Topic extends Post
+public class Topic extends Post implements Serializable
 {
     /** URL for the topic page */
     private String url;

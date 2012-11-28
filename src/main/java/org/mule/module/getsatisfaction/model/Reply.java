@@ -10,6 +10,7 @@
 
 package org.mule.module.getsatisfaction.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
@@ -21,7 +22,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 @JsonSerialize(include=Inclusion.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Reply extends Post
+public class Reply extends Post implements Serializable
 {
     
     private String content;

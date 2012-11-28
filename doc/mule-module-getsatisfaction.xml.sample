@@ -16,9 +16,6 @@
 <!-- BEGIN_INCLUDE(getsatisfaction:get-products-by-company) -->
 <getsatisfaction:get-products-by-company company="mulesoft"/>
 <!-- END_INCLUDE(getsatisfaction:get-products-by-company) -->
-<!-- BEGIN_INCLUDE(getsatisfaction:get-replies) -->
-<getsatisfaction:get-replies/>
-<!-- END_INCLUDE(getsatisfaction:get-replies) -->
 <!-- BEGIN_INCLUDE(getsatisfaction:get-replies-by-topic) -->
 <getsatisfaction:get-replies-by-topic idOrSlug="001"/>
 <!-- END_INCLUDE(getsatisfaction:get-replies-by-topic) -->
@@ -57,6 +54,21 @@
 <!-- BEGIN_INCLUDE(getsatisfaction:transform-topic-to-json) -->
 <getsatisfaction:transform-topic-to-json/>
 <!-- END_INCLUDE(getsatisfaction:transform-topic-to-json) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-topics-to-json) -->
+<getsatisfaction:transform-topics-to-json/>
+<!-- END_INCLUDE(getsatisfaction:transform-topics-to-json) -->
 <!-- BEGIN_INCLUDE(getsatisfaction:transform-reply-to-json) -->
 <getsatisfaction:transform-reply-to-json/>
 <!-- END_INCLUDE(getsatisfaction:transform-reply-to-json) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-replys-to-json) -->
+<getsatisfaction:transform-replys-to-json/>
+<!-- END_INCLUDE(getsatisfaction:transform-replys-to-json) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-product-to-json) -->
+<getsatisfaction:transform-product-to-json/>
+<!-- END_INCLUDE(getsatisfaction:transform-product-to-json) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-products-to-json) -->
+<getsatisfaction:transform-products-to-json/>
+<!-- END_INCLUDE(getsatisfaction:transform-products-to-json) -->
+<!-- BEGIN_INCLUDE(getsatisfaction:transform-gs-object-to-json) -->
+<getsatisfaction:transform-gs-object-to-json/>
+<!-- END_INCLUDE(getsatisfaction:transform-gs-object-to-json) -->

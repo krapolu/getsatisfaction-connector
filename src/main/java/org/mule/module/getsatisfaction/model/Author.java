@@ -10,6 +10,8 @@
 
 package org.mule.module.getsatisfaction.model;
 
+import java.io.Serializable;
+
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
@@ -18,7 +20,7 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 @JsonSerialize(include=Inclusion.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Author
+public class Author implements Serializable
 {
 
     private String profileUrl;

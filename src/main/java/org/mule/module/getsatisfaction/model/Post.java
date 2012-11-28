@@ -10,11 +10,13 @@
 
 package org.mule.module.getsatisfaction.model;
 
+import java.io.Serializable;
+
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown=true)
-public abstract class Post
+public abstract class Post implements Serializable
 {
 
     private User user;

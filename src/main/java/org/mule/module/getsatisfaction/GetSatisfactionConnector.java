@@ -10,8 +10,13 @@
 
 package org.mule.module.getsatisfaction;
 
-import com.gsfn.FastPass;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URLEncoder;
+import java.util.List;
+
 import net.oauth.OAuthException;
+
 import org.apache.commons.httpclient.Cookie;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
@@ -45,13 +50,18 @@ import org.mule.module.getsatisfaction.model.Status;
 import org.mule.module.getsatisfaction.model.Style;
 import org.mule.module.getsatisfaction.model.Topic;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URLEncoder;
-import java.util.List;
+import com.gsfn.FastPass;
 
 /**
- * Cloud Connector
+ * GetSatisfaction Cloud Connector
+ * <p/>
+ * Allows to access the services provided by GetSatisfaction in a RESTful manner.
+ * <p/>
+ * Get Satisfaction is the leading customer engagement platform that helps companies build better relationships 
+ * with their customers and prospects, and better relationships mean better business. Get Satisfaction powers 70,000 
+ * customer communities for companies of all sizes and over 4 million registered users interact with top global brands 
+ * on Get Satisfaction. With Get Satisfaction, you can quickly set-up an online customer community to engage with your 
+ * customers anywhere they are: your website, Facebook, search and mobile devices.
  *
  * @author MuleSoft, Inc.
  */
@@ -68,6 +78,14 @@ public abstract class GetSatisfactionConnector {
      */
     @Configurable
     private String secret;
+    
+    /**
+     * Fastpass url connection 
+     */
+    @Configurable
+    @Default("mulesoft")
+    @Optional
+    private String companyName;
 
     /**
      * Email address of the user
@@ -107,7 +125,7 @@ public abstract class GetSatisfactionConnector {
         String url = null;
         try {
             String fastpass = URLEncoder.encode(FastPass.url(getKey(), getSecret(), getEmail(), getFullName(), getUid()), "UTF-8");
-            url = "http://getsatisfaction.com/mulesoft?fastpass=" + fastpass;
+            url = String.format("http://getsatisfaction.com/%s?fastpass=%s", companyName ,fastpass);
         } catch (OAuthException e) {
             throw new ConnectionException(ConnectionExceptionCode.UNKNOWN, "", e.getMessage(), e);
         } catch (IOException e) {
@@ -278,22 +296,7 @@ public abstract class GetSatisfactionConnector {
     @RestCall(uri = "http://api.getsatisfaction.com/companies/{company}/products.json", method = org.mule.api.annotations.rest.HttpMethod.GET, exceptions={@RestExceptionOn(expression="#[message.inboundProperties['http.status'] != 200]")})
     public abstract List<Product> getProductsByCompany(@RestUriParam("company") String company) throws IOException;
 
-    /**
-     * Get all replies
-     * <p/>
-     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:get-replies}
-     *
-     * @param filterBy        Filter by
-     * @param includeComments Ixclude comments from the returned replies
-     * @return A JSON representing a reply
-     * @throws IOException If there is a communication error
-     */
-    @Processor
-    @RestCall(uri = "http://api.getsatisfaction.com/replies.json", method = org.mule.api.annotations.rest.HttpMethod.GET, exceptions={@RestExceptionOn(expression="#[message.inboundProperties['http.status'] != 200]")})
-    public abstract List<Reply> getReplies(@RestQueryParam("filter") @Optional ReplyFilterCriteria filterBy,
-                                           @RestQueryParam("include_comments") @Optional @Default("false") Boolean includeComments) throws IOException;
-
-    /**
+   /**
      * Get all replies for a topic
      * <p/>
      * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:get-replies-by-topic}
@@ -361,7 +364,122 @@ public abstract class GetSatisfactionConnector {
     public abstract String createReplyForTopic(@RestUriParam("idOrSlug") String idOrSlug,
                                                Reply reply) throws IOException;
 
+    /**
+     * Create a JSON representation of an object from GetSatisfaction.
+     * <p/>
+     * Supported objects are {@link Topic} and {@link Reply}.
+     * <p/>
+     * Supported list are list of {@link Topic}, list of {@link Reply} and list of {@link Product}
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-gs-object-to-json}
+     * 
+     * @param obj The object to transform
+     * @return A JSON representation of the object
+     * @throws IOException If there is a transformation error
+     */
+    @SuppressWarnings("unchecked")
+	@Transformer(sourceTypes = {Object.class})
+    public static String transformGsObjectToJson(Object obj) throws IOException {
+    	
+    	if (obj instanceof Topic) {
+    		return transformTopicToJson((Topic) obj); // Topic    		
+    	} else if (obj instanceof Reply) {
+    		return transformReplyToJson((Reply) obj); // Reply
+    	} else if (obj instanceof List<?>) {
+    		List<?> l = (List<?>) obj;
+    		if (l != null && l.size() > 0) {
+    			Object child = l.get(0);
+    			if (child instanceof Topic) {
+    				return transformTopicsToJson((List<Topic>) obj); 		// List<Topic>
+    			} else if (child instanceof Reply) {
+    				return transformReplysToJson((List<Reply>) obj); 		// List<Reply>
+    			} else if (child instanceof Product) {
+    				return transformProductsToJson((List<Product>) obj);	// List<Product>
+    			}
+    		}
+    	} 
+    	
+    	return null;
+    }
+    
+    /**
+     * Create a JSON representation of a list of {@link Topic} objects 
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-topics-to-json}
+     * 
+     * @param topics List of Topic to transform
+     * @return A JSON representation of a list of {@link Topic} objects
+     * @throws IOException If there is a transformation error
+     */
+    @Transformer(sourceTypes = {List.class})
+    public static String transformTopicsToJson(List<Topic> topics) throws IOException {
+    	
+    	StringBuilder sb = new StringBuilder();
 
+    	sb.append("[");
+
+    	for (int e = 0, m = topics.size() ; e < m ; e++) {
+    		if (e > 0) sb.append(", ");
+    		sb.append(transformTopicToJson(topics.get(e)));
+    	}
+    	
+    	sb.append("]");
+    	
+    	return sb.toString();
+    }
+    
+    /**
+     * Create a JSON representation of a list of {@link Product} objects 
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-products-to-json}
+     * 
+     * @param products List of Product to transform
+     * @return A JSON representation of a list of {@link Product} objects
+     * @throws IOException If there is a transformation error
+     */
+    @Transformer(sourceTypes = {List.class})
+    public static String transformProductsToJson(List<Product> products) throws IOException {
+    	
+    	StringBuilder sb = new StringBuilder();
+    	
+    	sb.append("[");
+
+    	for (int e = 0, m = products.size() ; e < m ; e++) {
+    		if (e > 0) sb.append(", ");
+    		sb.append(transformProductToJson(products.get(e)));
+    	}
+    	
+    	sb.append("]");
+    	
+    	return sb.toString();    
+    }
+        
+    /**
+     * Create a JSON representation of a list of {@link Reply} objects 
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-replys-to-json}
+     * 
+     * @param replys List of Product to transform
+     * @return A JSON representation of a list of {@link Reply} objects
+     * @throws IOException If there is a transformation error
+     */
+    @Transformer(sourceTypes = {List.class})
+    public static String transformReplysToJson(List<Reply> replys) throws IOException {
+    	
+    	StringBuilder sb = new StringBuilder();
+    	
+    	sb.append("[");
+
+    	for (int e = 0, m = replys.size() ; e < m ; e++) {
+    		if (e > 0) sb.append(", ");
+    		sb.append(transformReplyToJson(replys.get(e)));
+    	}
+    	
+    	sb.append("]");
+    	
+    	return sb.toString();    
+    }
+    
     /**
      * Create a JSON representation of a {@link Topic} object
      * <p/>
@@ -377,7 +495,23 @@ public abstract class GetSatisfactionConnector {
 
         return "{ \"topic\": " + mapper.writeValueAsString(topic) + " }";
     }
-
+    
+    /**
+     * Create a JSON representation of a {@link Product} object
+     * <p/>
+     * {@sample.xml ../../../doc/mule-module-getsatisfaction.xml.sample getsatisfaction:transform-product-to-json}
+     *
+     * @param product Product to transform
+     * @return A JSON representation of a {@link Product} object
+     * @throws IOException If there is a transformation error
+     */
+    @Transformer(sourceTypes = {Product.class})
+    public static String transformProductToJson(Product product) throws IOException {
+    	ObjectMapper mapper = new ObjectMapper();
+    	
+    	return "{ \"product\": " + mapper.writeValueAsString(product) + " }";    	
+    }
+    
     /**
      * Create a JSON representation of a {@link Reply} object
      * <p/>
@@ -516,4 +650,13 @@ public abstract class GetSatisfactionConnector {
     public void setHttpClient(HttpClient httpClient) {
         this.httpClient = httpClient;
     }
+
+	public String getCompanyName() {
+		return companyName;
+	}
+
+
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
 }

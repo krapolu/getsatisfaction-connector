@@ -10,11 +10,13 @@
 
 package org.mule.module.getsatisfaction.model;
 
+import java.io.Serializable;
+
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class SearchResults<T>
+public class SearchResults<T> implements Serializable
 {
     private int total;
     private T data;
