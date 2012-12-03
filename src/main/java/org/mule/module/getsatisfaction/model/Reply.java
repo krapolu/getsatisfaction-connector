@@ -212,7 +212,7 @@ public class Reply extends Post implements Serializable
         this.commentsUrl = commentsUrl;
     }
     
-    @JsonIgnore
+    @JsonProperty("id")
     public long getId()
     {
         return id;

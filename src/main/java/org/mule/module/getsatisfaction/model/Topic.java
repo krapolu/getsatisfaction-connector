@@ -190,7 +190,7 @@ public class Topic extends Post implements Serializable
         this.emotitag = emotitag;
     }
 
-    @JsonIgnore
+    @JsonProperty("id")
     public long getId()
     {
         return id;

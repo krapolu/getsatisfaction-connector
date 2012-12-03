@@ -4,13 +4,13 @@
         <properties>
             <property value="gsconf" name="name"/>
             <property value="1" name="auxiliary;index"/>
-            <property value="emiliano.lesende" name="uid"/>
-            <property value="emiliano.lesende@mulesoft.com" name="email"/>
-            <property value="Emiliano Lesende" name="fullName"/>
+            <property value="uid" name="uid"/>
+            <property value="email" name="email"/>
+            <property value="fullName" name="fullName"/>
             <property value="1" name="auxiliary;index"/>
             <property name="companyName"/>
-            <property value="1fjo088bougl" name="key"/>
-            <property value="aqfi8q65z031wlhqsrj37rhuv1qlwy78" name="secret"/>
+            <property value="key" name="key"/>
+            <property value="secret" name="secret"/>
             <property value="1" name="auxiliary;index"/>
             <property value="1" name="auxiliary;index"/>
             <property value="1" name="auxiliary;index"/>
@@ -18,118 +18,77 @@
             <property value="1" name="auxiliary;index"/>
         </properties>
     </global-element>
-    <flow SubFlow="false" name="Topics_Flow" entity-id="f247bfee-24b7-47ca-a638-8e29d7eb3170">
+    <global-element type="org.mule.tooling.ui.modules.core.global.ScriptXform" name="Script" entity-id="Script#1">
+        <properties>
+            <property name="returnClass"/>
+            <property name="ignoreBadInput"/>
+            <property name="encoding"/>
+            <property value="2" name="auxiliary;index"/>
+            <property name="mimeType"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="TopicDummy" name="name"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="2" name="auxiliary;index"/>
+            <property value="2" name="auxiliary;index"/>
+            <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script-for-properties;0">
+                <property value="Groovy" name="engine"/>
+                <property value="TopicDummy.groovy" name="file"/>
+                <property value="3" name="auxiliary;wrapIn"/>
+                <property value="3" name="auxiliary;index"/>
+            </property-collection>
+            <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script;0">
+                <property value="Groovy" name="engine"/>
+                <property value="TopicDummy.groovy" name="file"/>
+                <property value="3" name="auxiliary;wrapIn"/>
+                <property value="3" name="auxiliary;index"/>
+            </property-collection>
+        </properties>
+    </global-element>
+    <global-element type="org.mule.tooling.ui.modules.core.global.ScriptXform" name="Script" entity-id="Script#2">
+        <properties>
+            <property name="returnClass"/>
+            <property name="ignoreBadInput"/>
+            <property name="encoding"/>
+            <property value="4" name="auxiliary;index"/>
+            <property name="mimeType"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="ReplyDummy" name="name"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property value="4" name="auxiliary;index"/>
+            <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script-for-properties;0">
+                <property value="Groovy" name="engine"/>
+                <property value="ReplyDummy.groovy" name="file"/>
+                <property value="5" name="auxiliary;wrapIn"/>
+                <property value="5" name="auxiliary;index"/>
+            </property-collection>
+            <property-collection name="@http://www.mulesoft.org/schema/mule/scripting/script;0">
+                <property value="Groovy" name="engine"/>
+                <property value="ReplyDummy.groovy" name="file"/>
+                <property value="5" name="auxiliary;wrapIn"/>
+                <property value="5" name="auxiliary;index"/>
+            </property-collection>
+        </properties>
+    </global-element>
+    <flow SubFlow="false" name="Get_Products_By_Company_Flow" entity-id="0216e165-5c5c-4718-bcbe-5ed3d55c8171">
         <properties>
             <property name="processingStrategy2"/>
             <property name="processingStrategy"/>
-            <property value="2" name="auxiliary;index"/>
+            <property value="6" name="auxiliary;index"/>
             <property name="bussinessEventsLabel"/>
             <property name="tracking:enable-default-events"/>
-            <property value="2" name="auxiliary;index"/>
-            <property value="2" name="auxiliary;index"/>
-            <property value="2" name="auxiliary;index"/>
+            <property value="6" name="auxiliary;index"/>
+            <property value="6" name="auxiliary;index"/>
+            <property value="6" name="auxiliary;index"/>
         </properties>
         <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#1">
             <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/http/endpoint" name="HTTP" entity-id="HTTP#1">
-                <properties>
-                    <property value="one-way" name="exchange-pattern"/>
-                    <property value="request-response" name="exchange-pattern"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property value="http://www.mulesoft.org/schema/mule/http/endpoint" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property name="httpLabel"/>
-                    <property value="localhost" name="host"/>
-                    <property value="8090" name="port"/>
-                    <property value="topics" name="path"/>
-                    <property name="method"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property name="businessEventsLabel"/>
-                    <property name="tracking:enable-default-events"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property name="address"/>
-                    <property name="encoding"/>
-                    <property name="disableTransportTransformer"/>
-                    <property name="mimeType"/>
-                    <property name="responseTimeout"/>
-                    <property name="followRedirects"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property name="connector-ref"/>
-                    <property name="ref"/>
-                    <property name="transformer-refs"/>
-                    <property name="responseTransformer-refs"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property name="user"/>
-                    <property name="password"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property name="contentType"/>
-                    <property name="keep-alive"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property value="3" name="auxiliary;index"/>
-                    <property value="3" name="auxiliary;index"/>
-                </properties>
-            </endpoint>
-            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="Get a List of Topic by company" entity-id="GetSatisfaction#2">
-                <properties>
-                    <property value="gsconf" name="config-ref"/>
-                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/get-topics-by-company" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
-                    <property value="gsconf" name="config-ref"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="mulesoft" name="company"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property name=""/>
-                    <property name="uid"/>
-                    <property name="email"/>
-                    <property name="fullName"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="4" name="auxiliary;index"/>
-                    <property value="4" name="auxiliary;index"/>
-                </properties>
-            </pattern>
-            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-transformer" name="Transform a List of Topic to JSON" entity-id="GetSatisfaction#3">
-                <properties>
-                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
-                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property name="returnClass"/>
-                    <property name="ignoreBadInput"/>
-                    <property name="encoding"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property name="mimeType"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                    <property value="5" name="auxiliary;index"/>
-                </properties>
-            </pattern>
-        </lane>
-    </flow>
-    <flow SubFlow="false" name="Products_Flow" entity-id="d6c3420d-548b-4c40-a426-a28dab8c8b11">
-        <properties>
-            <property name="processingStrategy2"/>
-            <property name="processingStrategy"/>
-            <property value="6" name="auxiliary;index"/>
-            <property name="bussinessEventsLabel"/>
-            <property name="tracking:enable-default-events"/>
-            <property value="6" name="auxiliary;index"/>
-            <property value="6" name="auxiliary;index"/>
-            <property value="6" name="auxiliary;index"/>
-        </properties>
-        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#2">
-            <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/http/endpoint" name="HTTP" entity-id="HTTP#2">
                 <properties>
                     <property value="one-way" name="exchange-pattern"/>
                     <property value="request-response" name="exchange-pattern"/>
@@ -171,7 +130,7 @@
                     <property value="7" name="auxiliary;index"/>
                 </properties>
             </endpoint>
-            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="Get List of Product by Company" entity-id="GetSatisfaction#4">
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="Get Products by Company" entity-id="GetSatisfaction#2">
                 <properties>
                     <property value="gsconf" name="config-ref"/>
                     <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/get-products-by-company" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
@@ -193,7 +152,7 @@
                     <property value="8" name="auxiliary;index"/>
                 </properties>
             </pattern>
-            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-transformer" name="Transform a List of Product to JSON" entity-id="GetSatisfaction#5">
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-transformer" name="Transform GS Object to JSON" entity-id="GetSatisfaction#3">
                 <properties>
                     <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
                     <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
@@ -216,42 +175,386 @@
             </pattern>
         </lane>
     </flow>
-    <flow SubFlow="false" name="Get_Satisfaction_Connector_DemoFlow1" entity-id="d87d1bda-352f-407f-851b-2b1ee147a95f">
-        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="a3598c0c-9629-467d-b2e3-a11325abd808">
-            <endpoint message-exchange-pattern="RequestResponse" direction="Inbound" type="http://www.mulesoft.org/schema/mule/https/endpoint" name="HTTP" entity-id="ba51de14-399a-45a2-97d4-7e362f7b84c9">
+    <flow SubFlow="false" name="Get_Topics_By_Company_Flow" entity-id="ff54e56a-05dc-40a6-897d-0298d4df49fe">
+        <properties>
+            <property name="processingStrategy2"/>
+            <property name="processingStrategy"/>
+            <property value="10" name="auxiliary;index"/>
+            <property name="bussinessEventsLabel"/>
+            <property name="tracking:enable-default-events"/>
+            <property value="10" name="auxiliary;index"/>
+            <property value="10" name="auxiliary;index"/>
+            <property value="10" name="auxiliary;index"/>
+        </properties>
+        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#2">
+            <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/http/endpoint" name="HTTP" entity-id="HTTP#2">
                 <properties>
+                    <property value="one-way" name="exchange-pattern"/>
                     <property value="request-response" name="exchange-pattern"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="http://www.mulesoft.org/schema/mule/http/endpoint" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property name="httpLabel"/>
+                    <property value="localhost" name="host"/>
+                    <property value="8090" name="port"/>
+                    <property value="topics" name="path"/>
+                    <property name="method"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property name="businessEventsLabel"/>
+                    <property name="tracking:enable-default-events"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property name="address"/>
+                    <property name="encoding"/>
+                    <property name="disableTransportTransformer"/>
+                    <property name="mimeType"/>
+                    <property name="responseTimeout"/>
+                    <property name="followRedirects"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property name="connector-ref"/>
+                    <property name="ref"/>
+                    <property name="transformer-refs"/>
+                    <property name="responseTransformer-refs"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property name="user"/>
+                    <property name="password"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property name="contentType"/>
+                    <property name="keep-alive"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
+                    <property value="11" name="auxiliary;index"/>
                 </properties>
             </endpoint>
-            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="GetSatisfaction" entity-id="d142716b-560b-47b7-b274-61c26bafccad">
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="Get Topics by Company" entity-id="GetSatisfaction#4">
                 <properties>
-                    <property value="" name=""/>
-                    <property value="" name="uid"/>
-                    <property value="" name="tag"/>
-                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/get-topics" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
-                    <property value="true" name="auxiliary;erased;style"/>
-                    <property value="#[payload]" name="ref"/>
-                    <property value="" name="sortBy"/>
-                    <property value="" name="style"/>
-                    <property value="" name="email"/>
-                    <property value="" name="search"/>
-                    <property value="true" name="auxiliary;erased;sortBy"/>
-                    <property value="" name="userId"/>
-                    <property value="" name="activeSince"/>
-                    <property value="" name="fullName"/>
-                    <property value="getsatisconfig" name="config-ref"/>
-                    <property name="updated"/>
-                    <property-collection name="@http://www.mulesoft.org/schema/mule/getsatisfaction/get-topics-productss;1">
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/get-topics-by-company" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="mulesoft" name="company"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property name=""/>
+                    <property name="uid"/>
+                    <property name="email"/>
+                    <property name="fullName"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                    <property value="12" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-transformer" name="Transform GS Object to JSON" entity-id="GetSatisfaction#5">
+                <properties>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property name="returnClass"/>
+                    <property name="ignoreBadInput"/>
+                    <property name="encoding"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property name="mimeType"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                    <property value="13" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+        </lane>
+    </flow>
+    <flow SubFlow="false" name="Get_Replies_By_Topics_Flow" entity-id="3f55215c-1eee-4e7b-8c9c-450e641f54fb">
+        <properties>
+            <property name="processingStrategy2"/>
+            <property name="processingStrategy"/>
+            <property value="14" name="auxiliary;index"/>
+            <property name="bussinessEventsLabel"/>
+            <property name="tracking:enable-default-events"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+            <property value="14" name="auxiliary;index"/>
+        </properties>
+        <description>With one ID obtained from the Get_Topics_By_Company_Flow we can execute this one</description>
+        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#3">
+            <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/http/endpoint" name="HTTP" entity-id="HTTP#3">
+                <properties>
+                    <property value="one-way" name="exchange-pattern"/>
+                    <property value="request-response" name="exchange-pattern"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property value="http://www.mulesoft.org/schema/mule/http/endpoint" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property name="httpLabel"/>
+                    <property value="localhost" name="host"/>
+                    <property value="8090" name="port"/>
+                    <property value="replies" name="path"/>
+                    <property name="method"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property name="businessEventsLabel"/>
+                    <property name="tracking:enable-default-events"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property name="address"/>
+                    <property name="encoding"/>
+                    <property name="disableTransportTransformer"/>
+                    <property name="mimeType"/>
+                    <property name="responseTimeout"/>
+                    <property name="followRedirects"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property name="connector-ref"/>
+                    <property name="ref"/>
+                    <property name="transformer-refs"/>
+                    <property name="responseTransformer-refs"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property name="user"/>
+                    <property name="password"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property name="contentType"/>
+                    <property name="keep-alive"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property value="15" name="auxiliary;index"/>
+                    <property value="15" name="auxiliary;index"/>
+                </properties>
+            </endpoint>
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="Get Replies by Topic" entity-id="GetSatisfaction#6">
+                <properties>
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/get-replies-by-topic" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="3531965" name="idOrSlug"/>
+                    <property name="filterBy"/>
+                    <property name="includeComments"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property name=""/>
+                    <property name="uid"/>
+                    <property name="email"/>
+                    <property name="fullName"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                    <property value="16" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-transformer" name="Transform GS Object to JSON" entity-id="GetSatisfaction#7">
+                <properties>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/transform-gs-object-to-json" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property name="returnClass"/>
+                    <property name="ignoreBadInput"/>
+                    <property name="encoding"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property name="mimeType"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                    <property value="17" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+        </lane>
+    </flow>
+    <flow SubFlow="false" name="Create_Topic_Flow" entity-id="aff7819c-0cec-4ead-9c51-c1d0415b9919">
+        <properties>
+            <property name="processingStrategy2"/>
+            <property name="processingStrategy"/>
+            <property value="18" name="auxiliary;index"/>
+            <property name="bussinessEventsLabel"/>
+            <property name="tracking:enable-default-events"/>
+            <property value="18" name="auxiliary;index"/>
+            <property value="18" name="auxiliary;index"/>
+            <property value="18" name="auxiliary;index"/>
+        </properties>
+        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#4">
+            <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/http/endpoint" name="HTTP" entity-id="HTTP#4">
+                <properties>
+                    <property value="one-way" name="exchange-pattern"/>
+                    <property value="request-response" name="exchange-pattern"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property value="http://www.mulesoft.org/schema/mule/http/endpoint" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property name="httpLabel"/>
+                    <property value="localhost" name="host"/>
+                    <property value="8090" name="port"/>
+                    <property value="createtopic" name="path"/>
+                    <property name="method"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property name="businessEventsLabel"/>
+                    <property name="tracking:enable-default-events"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property name="address"/>
+                    <property name="encoding"/>
+                    <property name="disableTransportTransformer"/>
+                    <property name="mimeType"/>
+                    <property name="responseTimeout"/>
+                    <property name="followRedirects"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property name="connector-ref"/>
+                    <property name="ref"/>
+                    <property name="transformer-refs"/>
+                    <property name="responseTransformer-refs"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property name="user"/>
+                    <property name="password"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property name="contentType"/>
+                    <property name="keep-alive"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property value="19" name="auxiliary;index"/>
+                    <property value="19" name="auxiliary;index"/>
+                </properties>
+            </endpoint>
+            <pattern type="org.mule.tooling.ui.modules.core.pattern.globalXformRef" name="Topic Dummy" entity-id="Transformer Reference#1">
+                <properties>
+                    <property value="TopicDummy" name="ref"/>
+                    <property value="20" name="auxiliary;index"/>
+                    <property value="20" name="auxiliary;index"/>
+                    <property value="20" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="Create topic at company" entity-id="GetSatisfaction#8">
+                <properties>
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/create-topic-at-company" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="mulesoft" name="companyId"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property name=""/>
+                    <property name="uid"/>
+                    <property name="email"/>
+                    <property name="fullName"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property value="21" name="auxiliary;index"/>
+                    <property-collection name="@http://www.mulesoft.org/schema/mule/getsatisfaction/topic;0">
                         <property value="#[payload]" name="ref"/>
-                    </property-collection>
-                    <property-collection name="@http://www.mulesoft.org/schema/mule/getsatisfaction/get-topics-statuss;1">
-                        <property value="#[payload]" name="ref"/>
-                    </property-collection>
-                    <property-collection name="@http://www.mulesoft.org/schema/mule/getsatisfaction/get-topics-user-defined-codess;1">
-                        <property value="#[payload]" name="ref"/>
+                        <property value="22" name="auxiliary;wrapIn"/>
+                        <property value="22" name="auxiliary;index"/>
                     </property-collection>
                 </properties>
-                <description></description>
+            </pattern>
+        </lane>
+    </flow>
+    <flow SubFlow="false" name="Create_Reply_For_Topic_Flow" entity-id="c1c37472-e153-4918-8dfc-9232d6c2ea91">
+        <properties>
+            <property name="processingStrategy2"/>
+            <property name="processingStrategy"/>
+            <property value="23" name="auxiliary;index"/>
+            <property name="bussinessEventsLabel"/>
+            <property name="tracking:enable-default-events"/>
+            <property value="23" name="auxiliary;index"/>
+            <property value="23" name="auxiliary;index"/>
+            <property value="23" name="auxiliary;index"/>
+        </properties>
+        <lane isChoiceOtherwiseLane="false" index="0" hadOnlyOneElement="false" entity-id="compartment-lane#5">
+            <endpoint message-exchange-pattern="OneWay" direction="Inbound" type="http://www.mulesoft.org/schema/mule/http/endpoint" name="HTTP" entity-id="HTTP#5">
+                <properties>
+                    <property value="one-way" name="exchange-pattern"/>
+                    <property value="request-response" name="exchange-pattern"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property value="http://www.mulesoft.org/schema/mule/http/endpoint" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property name="httpLabel"/>
+                    <property value="localhost" name="host"/>
+                    <property value="8090" name="port"/>
+                    <property value="createreply" name="path"/>
+                    <property name="method"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property name="businessEventsLabel"/>
+                    <property name="tracking:enable-default-events"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property name="address"/>
+                    <property name="encoding"/>
+                    <property name="disableTransportTransformer"/>
+                    <property name="mimeType"/>
+                    <property name="responseTimeout"/>
+                    <property name="followRedirects"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property name="connector-ref"/>
+                    <property name="ref"/>
+                    <property name="transformer-refs"/>
+                    <property name="responseTransformer-refs"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property name="user"/>
+                    <property name="password"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property name="contentType"/>
+                    <property name="keep-alive"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property value="24" name="auxiliary;index"/>
+                    <property value="24" name="auxiliary;index"/>
+                </properties>
+            </endpoint>
+            <pattern type="org.mule.tooling.ui.modules.core.pattern.globalXformRef" name="Reply Dummy" entity-id="Transformer Reference#2">
+                <properties>
+                    <property value="ReplyDummy" name="ref"/>
+                    <property value="25" name="auxiliary;index"/>
+                    <property value="25" name="auxiliary;index"/>
+                    <property value="25" name="auxiliary;index"/>
+                </properties>
+            </pattern>
+            <pattern type="http://www.mulesoft.org/schema/mule/getsatisfaction/getsatisfaction-connector" name="Create Reply for topic" entity-id="GetSatisfaction#9">
+                <properties>
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="http://www.mulesoft.org/schema/mule/getsatisfaction/create-reply-for-topic" name="org.mule.tooling.ui.modules.core.widgets.meta.ModeAttribute"/>
+                    <property value="gsconf" name="config-ref"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="4735414" name="idOrSlug"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property name=""/>
+                    <property name="uid"/>
+                    <property name="email"/>
+                    <property name="fullName"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property value="26" name="auxiliary;index"/>
+                    <property-collection name="@http://www.mulesoft.org/schema/mule/getsatisfaction/reply;0">
+                        <property value="#[payload]" name="ref"/>
+                        <property value="27" name="auxiliary;wrapIn"/>
+                        <property value="27" name="auxiliary;index"/>
+                    </property-collection>
+                </properties>
             </pattern>
         </lane>
     </flow>
