@@ -17,7 +17,7 @@
 	
 	<properties>
         <mule.version>3.3.0</mule.version>
-        <category>Standard</category>
+        <category>Community</category>
         <licensePath>LICENSE.md</licensePath>
         <devkit.studio.package.skip>false</devkit.studio.package.skip>
     </properties>
