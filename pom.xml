@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.mule.tools.devkit</groupId>
         <artifactId>mule-devkit-parent</artifactId>
-        <version>3.3.1</version>
+        <version>3.3.2</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -14,9 +14,8 @@
     <packaging>mule-module</packaging>
     <name>Mule GetSatisfaction Connector</name>
 	
-	<properties>
-        <mule.version>3.3.0</mule.version>
-        <category>Community</category>
+    <properties>
+        <category>Standard</category>
         <licensePath>LICENSE.md</licensePath>
         <devkit.studio.package.skip>false</devkit.studio.package.skip>
     </properties>
