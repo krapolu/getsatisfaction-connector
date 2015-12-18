@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.mule.modules</groupId>
+    <artifactId>mule-module-getsatisfaction</artifactId>
+    <version>2.0.0</version>
+    <packaging>mule-module</packaging>
+    <name>Mule GetSatisfaction Connector</name>
 
     <parent>
         <groupId>org.mule.tools.devkit</groupId>
         <artifactId>mule-devkit-parent</artifactId>
-        <version>3.3.2</version>
+        <version>3.4.4</version>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>org.mule.modules</groupId>
-    <artifactId>mule-module-getsatisfaction</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
-    <packaging>mule-module</packaging>
-    <name>Mule GetSatisfaction Connector</name>
-	
     <properties>
-        <category>Standard</category>
+        <category>Community</category>
         <licensePath>LICENSE.md</licensePath>
         <devkit.studio.package.skip>false</devkit.studio.package.skip>
     </properties>
-	
+
     <dependencies>
         <dependency>
             <groupId>org.mule.transports</groupId>
@@ -32,75 +32,35 @@
             <version>${mule.version}</version>
         </dependency>
         <dependency>
-        	<groupId>com.gsfn</groupId>
-        	<artifactId>fastpass</artifactId>
-        	<version>1.0.0</version>
-        </dependency>        
+            <groupId>com.gsfn</groupId>
+            <artifactId>fastpass</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <dependency>
-        	<groupId>com.gsfn</groupId>
-        	<artifactId>oauth-core</artifactId>
-        	<version>1.0.0</version>
+            <groupId>com.gsfn</groupId>
+            <artifactId>oauth-core</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
     <repositories>
         <repository>
-            <id>muleforge-releases</id>
-            <name>MuleForge Releases Repository</name>
+            <id>mulesoft-releases</id>
+            <name>MuleSoft Releases Repository</name>
             <url>http://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
         <repository>
-            <id>muleforge-snapshots</id>
-            <name>MuleForge Snapshots Repository</name>
+            <id>mulesoft-snapshots</id>
+            <name>MuleSoft Snapshots Repository</name>
             <url>http://repository.mulesoft.org/snapshots/</url>
             <layout>default</layout>
         </repository>
-        <repository>
-		    <id>mule-ee-snapshot</id>
-		    <name>EE Repository Snapshots</name>	
-		    <url>https://repository.mulesoft.org/nexus/content/repositories/snapshots</url>
-		    <layout>default</layout>
-		  </repository>
-		  <repository>
-		    <id>mule-ee</id>
-		    <name>EE Repository Releases</name>	
-		    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
-		    <layout>default</layout>
-		  </repository>
     </repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>muleforge-plugin-releases</id>
-            <name>Muleforge Release Repository</name>
-            <url>http://repository.mulesoft.org/releases/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>muleforge-plugin-snapshots</id>
-            <name>Muleforge Snapshot Repository</name>
-            <url>http://repository.mulesoft.org/snapshots/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
     <scm>
-        <connection>scm:git:git://github.com:mulesoft/getsatisfaction-connector.git
-        </connection>
-        <developerConnection>
-            scm:git:git@github.com:mulesoft/getsatisfaction-connector.git
-        </developerConnection>
+        <connection>scm:git:git://github.com:mulesoft/getsatisfaction-connector.git</connection>
+        <developerConnection>scm:git:git@github.com:mulesoft/getsatisfaction-connector.git</developerConnection>
         <url>http://github.com/mulesoft/getsatisfaction-connector</url>
     </scm>
 </project>
