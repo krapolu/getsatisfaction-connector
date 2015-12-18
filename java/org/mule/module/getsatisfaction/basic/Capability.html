@@ -63,35 +63,38 @@
 
 
 
+
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <meta name="description" content="Documentation for Mule GetSatisfaction Connector." />
 
-<link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  ReplyFilterCriteria
+  Capability
 
 
 | Mule GetSatisfaction Connector
 
 </title>
-<link href="../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
-<link href="../../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
-<link href="../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
-<script src="../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
-<script src="../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
-<script src="../../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
-<script src="../../../../../assets/prettify.js" type="text/javascript"></script>
+<script src="../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-toc.js" type="text/javascript"></script>
+<script src="../../../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../assets/prettify.js" type="text/javascript"></script>
 <script type="text/javascript">
-  setToRoot("../../../../../", "../../../../../assets/");
+  setToRoot("../../../../../../", "../../../../../../assets/");
 </script>
-<script src="../../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
-<script src="../../../../../assets/navtree_data.js" type="text/javascript"></script>
-<script src="../../../../../assets/customizations.js" type="text/javascript"></script>
+<script src="../../../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../assets/customizations.js" type="text/javascript"></script>
 <noscript>
   <style type="text/css">
     html,body{overflow:auto;}
@@ -102,6 +105,27 @@
     #resize-packages-nav{border-bottom:3px solid #666;}
   </style>
 </noscript>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";
+  feedback_widget_options.company = "mulesoft";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#2F74AE";
+  feedback_widget_options.style = "question";
+
+  feedback_widget_options.tag = "Mule GetSatisfaction Connector";
+
+  feedback_widget_options.limit = "3";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
 </head>
 
 <body class="">
@@ -113,15 +137,15 @@
     
     <ul id="header-tabs" class="">
     
-    	<li id="guide"><a href="../../../../../guide/install.html">
+    	<li id="guide"><a href="../../../../../../guide/install.html">
 	    	<span class="en">Install Guide</span>
     	</a></li>
     
-    	<li id="java"><a href="../../../../../java/packages.html">
+    	<li id="java"><a href="../../../../../../java/packages.html">
 	    	<span class="en">Java API Reference</span>
     	</a></li>
     
-    	<li id="mule"><a href="../../../../../mule/modules.html">
+    	<li id="mule"><a href="../../../../../../mule/modules.html">
 	    	<span class="en">Mule API Reference</span>
     	</a></li>
     
@@ -129,7 +153,7 @@
     </div>
     <div id="headerRight">
       <a href="http://www.mulesoft.com" tabindex="-1">
-      <img src="../../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      <img src="../../../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
       
   <div id="search" >
       <div id="searchForm">
@@ -143,8 +167,8 @@
                       value="search developer docs"
                       onFocus="search_focus_changed(this, true)"
                       onBlur="search_focus_changed(this, false)"
-                      onkeydown="return search_changed(event, true, '../../../../../')"
-                      onkeyup="return search_changed(event, false, '../../../../../')" />
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
                   <div id="search_filtered_div" class="no-display">
                       <table id="search_filtered" cellspacing=0>
                       </table>
@@ -173,41 +197,63 @@
           <div id="resize-packages-nav">
             <div id="packages-nav">
               <div id="index-links">
-                <a href="../../../../../java/packages.html"  >Package Index</a> |
-                <a href="../../../../../java/classes.html" >Class Index</a>
+                <a href="../../../../../../java/packages.html"  >Package Index</a> |
+                <a href="../../../../../../java/classes.html" >Class Index</a>
               </div>
               <ul>
                 
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/package-summary.html">org.mule.module.getsatisfaction</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/adapter/package-summary.html">org.mule.module.getsatisfaction.adapter</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/package-summary.html">org.mule.module.getsatisfaction.adapters</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/agents/package-summary.html">org.mule.module.getsatisfaction.agents</a></li>
     <li class="selected api apilevel-">
-  <a href="../../../../../java/org/mule/module/getsatisfaction/package-summary.html">org.mule.module.getsatisfaction</a></li>
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/package-summary.html">org.mule.module.getsatisfaction.basic</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../java/org/mule/module/getsatisfaction/adapters/package-summary.html">org.mule.module.getsatisfaction.adapters</a></li>
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/callback/package-summary.html">org.mule.module.getsatisfaction.callback</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../java/org/mule/module/getsatisfaction/processors/package-summary.html">org.mule.module.getsatisfaction.processors</a></li>
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/connection/package-summary.html">org.mule.module.getsatisfaction.connection</a></li>
     <li class="api apilevel-">
-  <a href="../../../../../java/org/mule/module/getsatisfaction/transformers/package-summary.html">org.mule.module.getsatisfaction.transformers</a></li>
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/package-summary.html">org.mule.module.getsatisfaction.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/devkit/package-summary.html">org.mule.module.getsatisfaction.devkit</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/model/package-summary.html">org.mule.module.getsatisfaction.model</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/model/holders/package-summary.html">org.mule.module.getsatisfaction.model.holders</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/model/transformers/package-summary.html">org.mule.module.getsatisfaction.model.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/oauth/package-summary.html">org.mule.module.getsatisfaction.oauth</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/process/package-summary.html">org.mule.module.getsatisfaction.process</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/processors/package-summary.html">org.mule.module.getsatisfaction.processors</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/transformers/package-summary.html">org.mule.module.getsatisfaction.transformers</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
           <div id="classes-nav">
             <ul>
               
-              
-    <li><h2>Classes</h2>
+    <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capabilities.html">Capabilities</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/MetadataAware.html">MetadataAware</a></li>
       </ul>
     </li>
               
               
+              
     <li><h2>Enums</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/getsatisfaction/SortCriteria.html">SortCriteria</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/getsatisfaction/Status.html">Status</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/getsatisfaction/Style.html">Style</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a></li>
       </ul>
     </li>
               
@@ -217,8 +263,8 @@
         </div><!-- end nav-panels -->
         <div id="nav-tree" style="display:none">
           <div id="index-links">
-            <a href="../../../../../packages.html"  >Package Index</a> | 
-            <a href="../../../../../classes.html" >Class Index</a>
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
           </div>
         </div><!-- end nav-tree -->
       </div><!-- end swapper -->
@@ -228,7 +274,7 @@
         $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
         chooseDefaultNav();
         if ($("#nav-tree").is(':visible')) {
-          init_default_navtree("../../../../../");
+          init_default_navtree("../../../../../../");
         } else {
           addLoadEvent(function() {
             scrollIntoView("packages-nav");
@@ -331,7 +377,7 @@ Summary:
     final 
     
     enum
-<h1>ReplyFilterCriteria</h1>
+<h1>Capability</h1>
 
 
 
@@ -378,7 +424,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
         
-        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.getsatisfaction.ReplyFilterCriteria</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.getsatisfaction.basic.Capability</td>
     </tr>
     
 
@@ -392,6 +438,11 @@ Summary:
 
 <div class="jd-descr">
 
+
+<h2>Class Overview</h2>
+<p>Enumeration of possible capabilities of Mule modules. Each capability represents a bit in a bit array. The capabilities of a particular module can be queried using <code><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capabilities.html">Capabilities</a></code>
+ 
+</p>
 
 
 
@@ -434,25 +485,49 @@ Summary:
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a>&nbsp;</td>
-        <td class="jd-linkcol">BEST&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Return promoted replies (both star promoted and company chosen replies)
+        <td class="jd-descrcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>&nbsp;</td>
+        <td class="jd-linkcol">CONNECTION_MANAGEMENT_CAPABLE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">This capability indicates that the module implements ConnectionManager
 &nbsp;</td>
     </tr>
     
     
     <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a>&nbsp;</td>
-        <td class="jd-linkcol">COMPANY_PROMOTED&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Return only company promoted replies
+        <td class="jd-descrcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>&nbsp;</td>
+        <td class="jd-linkcol">LIFECYCLE_CAPABLE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">This capability indicates that the module implements org.mule.api.lifecycle.Lifecycle
 &nbsp;</td>
     </tr>
     
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a>&nbsp;</td>
-        <td class="jd-linkcol">STAR_PROMOTED&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Return only star promoted replies
+        <td class="jd-descrcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>&nbsp;</td>
+        <td class="jd-linkcol">OAUTH1_CAPABLE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">This capability indicates that the module implements org.mule.api.oauth.OAuth1Adapter
+&nbsp;</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>&nbsp;</td>
+        <td class="jd-linkcol">OAUTH2_CAPABLE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">This capability indicates that the module implements org.mule.api.oauth.OAuth2Adapter
+&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>&nbsp;</td>
+        <td class="jd-linkcol">OAUTH_ACCESS_TOKEN_MANAGEMENT_CAPABLE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">This capability indicates that the module implements org.mule.api.oauth.OAuthManager
+&nbsp;</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>&nbsp;</td>
+        <td class="jd-linkcol">POOLING_CAPABLE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">This capability indicates that the module implements org.mule.api.adapter.PoolManager
 &nbsp;</td>
     </tr>
     
@@ -476,8 +551,8 @@ Summary:
           private
           
           
-          String</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/getsatisfaction/ReplyFilterCriteria.html#code">code</a></td>
+          int</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/getsatisfaction/basic/Capability.html#bit">bit</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -500,7 +575,7 @@ Summary:
 
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-java.lang.Enum" class="jd-expando-trigger closed"
           ><img id="inherited-fields-java.lang.Enum-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
+          src="../../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>From class
 java.lang.Enum
 <div id="inherited-fields-java.lang.Enum">
@@ -568,10 +643,10 @@ java.lang.Enum
             
             
             
-            String</nobr>
+            int</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/ReplyFilterCriteria.html#toString()">toString</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/Capability.html#getBit()">getBit</a></span>()</nobr>
         
   </td></tr>
 
@@ -584,10 +659,10 @@ java.lang.Enum
             
             static
             
-            <a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a></nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/ReplyFilterCriteria.html#valueOf(java.lang.String)">valueOf</a></span>(String name)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/Capability.html#valueOf(java.lang.String)">valueOf</a></span>(String name)</nobr>
         
   </td></tr>
 
@@ -600,10 +675,10 @@ java.lang.Enum
             final
             static
             
-            <a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria[]</a></nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability[]</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/ReplyFilterCriteria.html#values()">values</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/Capability.html#values()">values</a></span>()</nobr>
         
   </td></tr>
 
@@ -627,7 +702,7 @@ java.lang.Enum
 <td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Enum" class="jd-expando-trigger closed"
           ><img id="inherited-methods-java.lang.Enum-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
+          src="../../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From class
 
@@ -829,7 +904,7 @@ From class
 <td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
           ><img id="inherited-methods-java.lang.Object-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
+          src="../../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From class
 
@@ -1033,7 +1108,7 @@ From class
 <td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Comparable" class="jd-expando-trigger closed"
           ><img id="inherited-methods-java.lang.Comparable-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
+          src="../../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 
@@ -1096,7 +1171,7 @@ From interface
 
 
 
-<A NAME="BEST"></A>
+<A NAME="CONNECTION_MANAGEMENT_CAPABLE"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1104,9 +1179,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a>
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>
       </span>
-        BEST
+        CONNECTION_MANAGEMENT_CAPABLE
     </h4>
       <div class="api-level">
         
@@ -1118,7 +1193,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Return promoted replies (both star promoted and company chosen replies)
+  <div class="jd-tagdata jd-tagdescr"><p>This capability indicates that the module implements ConnectionManager
 </p></div>
 
     
@@ -1127,7 +1202,7 @@ From interface
 
 
 
-<A NAME="COMPANY_PROMOTED"></A>
+<A NAME="LIFECYCLE_CAPABLE"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1135,9 +1210,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a>
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>
       </span>
-        COMPANY_PROMOTED
+        LIFECYCLE_CAPABLE
     </h4>
       <div class="api-level">
         
@@ -1149,7 +1224,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Return only company promoted replies
+  <div class="jd-tagdata jd-tagdescr"><p>This capability indicates that the module implements org.mule.api.lifecycle.Lifecycle
 </p></div>
 
     
@@ -1158,7 +1233,7 @@ From interface
 
 
 
-<A NAME="STAR_PROMOTED"></A>
+<A NAME="OAUTH1_CAPABLE"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1166,9 +1241,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a>
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>
       </span>
-        STAR_PROMOTED
+        OAUTH1_CAPABLE
     </h4>
       <div class="api-level">
         
@@ -1180,7 +1255,100 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Return only star promoted replies
+  <div class="jd-tagdata jd-tagdescr"><p>This capability indicates that the module implements org.mule.api.oauth.OAuth1Adapter
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="OAUTH2_CAPABLE"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>
+      </span>
+        OAUTH2_CAPABLE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>This capability indicates that the module implements org.mule.api.oauth.OAuth2Adapter
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="OAUTH_ACCESS_TOKEN_MANAGEMENT_CAPABLE"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>
+      </span>
+        OAUTH_ACCESS_TOKEN_MANAGEMENT_CAPABLE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>This capability indicates that the module implements org.mule.api.oauth.OAuthManager
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="POOLING_CAPABLE"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>
+      </span>
+        POOLING_CAPABLE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>This capability indicates that the module implements org.mule.api.adapter.PoolManager
 </p></div>
 
     
@@ -1202,7 +1370,7 @@ From interface
 
 
 
-<A NAME="code"></A>
+<A NAME="bit"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1210,9 +1378,9 @@ From interface
         private 
          
          
-        String
+        int
       </span>
-        code
+        bit
     </h4>
       <div class="api-level">
         
@@ -1249,7 +1417,7 @@ From interface
 
 
 
-<A NAME="toString()"></A>
+<A NAME="getBit()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1259,9 +1427,9 @@ From interface
          
          
          
-        String
+        int
       </span>
-      <span class="sympad">toString</span>
+      <span class="sympad">getBit</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -1290,7 +1458,7 @@ From interface
          
          
          
-        <a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria</a>
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a>
       </span>
       <span class="sympad">valueOf</span>
       <span class="normal">(String name)</span>
@@ -1330,7 +1498,7 @@ From interface
         final 
          
          
-        <a href="../../../../../java/org/mule/module/getsatisfaction/ReplyFilterCriteria.html">ReplyFilterCriteria[]</a>
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability[]</a>
       </span>
       <span class="sympad">values</span>
       <span class="normal">()</span>

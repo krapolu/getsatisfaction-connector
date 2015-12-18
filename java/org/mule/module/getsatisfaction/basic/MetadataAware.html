@@ -74,7 +74,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  ManagedConnectionProcessTemplate
+  MetadataAware
 
 
 | Mule GetSatisfaction Connector
@@ -205,19 +205,31 @@
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/package-summary.html">org.mule.module.getsatisfaction</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/adapter/package-summary.html">org.mule.module.getsatisfaction.adapter</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/package-summary.html">org.mule.module.getsatisfaction.adapters</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/agents/package-summary.html">org.mule.module.getsatisfaction.agents</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/package-summary.html">org.mule.module.getsatisfaction.basic</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/callback/package-summary.html">org.mule.module.getsatisfaction.callback</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
-    <li class="selected api apilevel-">
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/connection/package-summary.html">org.mule.module.getsatisfaction.connection</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/package-summary.html">org.mule.module.getsatisfaction.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/devkit/package-summary.html">org.mule.module.getsatisfaction.devkit</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/package-summary.html">org.mule.module.getsatisfaction.model</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/holders/package-summary.html">org.mule.module.getsatisfaction.model.holders</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/transformers/package-summary.html">org.mule.module.getsatisfaction.model.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/oauth/package-summary.html">org.mule.module.getsatisfaction.oauth</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/process/package-summary.html">org.mule.module.getsatisfaction.process</a></li>
     <li class="api apilevel-">
@@ -230,17 +242,20 @@
           <div id="classes-nav">
             <ul>
               
-              
-    <li><h2>Classes</h2>
+    <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionFactory.html">GetSatisfactionConnectorConnectionFactory</a></li>
-          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionKey.html">GetSatisfactionConnectorConnectionKey</a></li>
-          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionManager.html">GetSatisfactionConnectorConnectionManager</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/ManagedConnectionProcessTemplate.html">ManagedConnectionProcessTemplate</a>&lt;P&gt;</li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capabilities.html">Capabilities</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/MetadataAware.html">MetadataAware</a></li>
       </ul>
     </li>
               
               
+              
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a></li>
+      </ul>
+    </li>
               
               
             </ul><br/>
@@ -280,20 +295,6 @@
 
 
 
-  
-   
-  
-  
-  
-  
-
-  
-   
-  
-  
-  
-  
-
 
 <div class="sum-details-links">
 
@@ -306,22 +307,14 @@ Summary:
 
 
 
-  <a href="#lfields">Fields</a>
+
+
+
+
+  <a href="#pubmethods">Methods</a>
   
 
 
-
-  &#124; <a href="#pubctors">Ctors</a>
-  
-
-
-
-  &#124; <a href="#pubmethods">Methods</a>
-  
-
-
-
-  &#124; <a href="#inhmethods">Inherited Methods</a>
 
 &#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
 
@@ -344,23 +337,12 @@ Summary:
      
      
     
-    class
-<h1>ManagedConnectionProcessTemplate</h1>
+    interface
+<h1>MetadataAware</h1>
 
 
 
   
-    extends Object<br/>
-  
-  
-  
-
-  
-  
-      implements 
-      
-        ProcessTemplate&lt;T,&nbsp;O&gt; 
-      
   
   
 
@@ -375,15 +357,7 @@ Summary:
 
     <tr>
         
-        <td colspan="2" class="jd-inheritance-class-cell">java.lang.Object</td>
-    </tr>
-    
-
-    <tr>
-        
-            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
-        
-        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.getsatisfaction.connectivity.ManagedConnectionProcessTemplate&lt;P&gt;</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.getsatisfaction.basic.MetadataAware</td>
     </tr>
     
 
@@ -394,9 +368,75 @@ Summary:
 
 
 
+<table class="jd-sumtable jd-sumtable-subclasses"><tr><td colspan="12" style="border:none;margin:0;padding:0;">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="subclasses-indirect" class="jd-expando-trigger closed"
+          ><img id="subclasses-indirect-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>Known Indirect Subclasses
+
+  <div id="subclasses-indirect">
+      <div id="subclasses-indirect-list"
+              class="jd-inheritedlinks"
+              
+              >
+          
+            
+              <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a>,
+            
+              <a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionManager.html">GetSatisfactionConnectorConnectionManager</a>,
+            
+              <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorLifecycleAdapter.html">GetSatisfactionConnectorLifecycleAdapter</a>,
+            
+              <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html">GetSatisfactionConnectorMetadataAdapater</a>,
+            
+              <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorProcessAdapter.html">GetSatisfactionConnectorProcessAdapter</a>,
+            
+              <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html">GetSatisfactionConnectorRestClientAdapter</a>
+            
+          
+      </div>
+      <div id="subclasses-indirect-summary"
+              style="display: none;"
+              >
+  <table class="jd-sumtable-expando">
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a></td>
+              <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionIdentifierAdapter</code> is a wrapper around <code><a href="../../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that implements org.mule.devkit.dynamic.api.helper.Connection interface.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionManager.html">GetSatisfactionConnectorConnectionManager</a></td>
+              <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionManager</code> is a wrapper around <code><a href="../../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that adds connection management capabilities to the pojo.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorLifecycleAdapter.html">GetSatisfactionConnectorLifecycleAdapter</a></td>
+              <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorLifecycleAdapter</code> is a wrapper around <code><a href="../../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that adds lifecycle methods to the pojo.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html">GetSatisfactionConnectorMetadataAdapater</a></td>
+              <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorMetadataAdapater</code> is a wrapper around <code><a href="../../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that adds support for querying metadata about the extension.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorProcessAdapter.html">GetSatisfactionConnectorProcessAdapter</a></td>
+              <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorProcessAdapter</code> is a wrapper around <code><a href="../../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that enables custom processing strategies.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html">GetSatisfactionConnectorRestClientAdapter</a></td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+  </table>
+      </div>
+  </div>
+</td></tr></table>
+
 
 <div class="jd-descr">
 
+
+<h2>Class Overview</h2>
+<p>This interface is implemented for every org.mule.api.annotations.Module and org.mule.api.annotations.Connector annotated class and its purpose is to define a contract to query the annotated class about its metadata.
+ 
+</p>
 
 
 
@@ -441,54 +481,9 @@ Summary:
 
 
 
-<!-- =========== FIELD SUMMARY =========== -->
-<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
-
-
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          private
-          
-          final
-          ProcessInterceptor&lt;P,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a>&gt;</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/getsatisfaction/connectivity/ManagedConnectionProcessTemplate.html#processInterceptor">processInterceptor</a></td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-
-</table>
 
 
 
-
-
-
-
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
-
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            </nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/connectivity/ManagedConnectionProcessTemplate.html#ManagedConnectionProcessTemplate(org.mule.api.ConnectionManager<org.mule.module.getsatisfaction.connectivity.GetSatisfactionConnectorConnectionKey, org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorConnectionIdentifierAdapter>, org.mule.api.MuleContext)">ManagedConnectionProcessTemplate</a></span>(ConnectionManager&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionKey.html">GetSatisfactionConnectorConnectionKey</a>,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a>&gt; connectionManager, MuleContext muleContext)</nobr>
-        
-  </td></tr>
-
-
-
-</table>
 
 
 
@@ -503,169 +498,7 @@ Summary:
 	 
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            P</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/connectivity/ManagedConnectionProcessTemplate.html#execute(org.mule.api.process.ProcessCallback<P, org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorConnectionIdentifierAdapter>, org.mule.api.processor.MessageProcessor, org.mule.api.MuleEvent)">execute</a></span>(ProcessCallback&lt;P,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a>&gt; processCallback, MessageProcessor messageProcessor, MuleEvent event)</nobr>
-        
-  </td></tr>
-
-
-
-</table>
-
-
-
-
-
-
-
-<!-- ========== METHOD SUMMARY =========== -->
-<table id="inhmethods" class="jd-sumtable"><tr><th>
-  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
-  <div style="clear:left;">Inherited Methods</div></th></tr>
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-java.lang.Object-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From class
-
-  java.lang.Object
-
-<div id="inherited-methods-java.lang.Object">
-  <div id="inherited-methods-java.lang.Object-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            Object</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clone</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(Object arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">finalize</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            final
-            
-            
-            Class&lt;?&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getClass</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            int</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">hashCode</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            final
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notify</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            final
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notifyAll</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
+            abstract
             
             
             
@@ -673,83 +506,31 @@ From class
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toString</span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getDevkitBuild()">getDevkitBuild</a></span>()</nobr>
         
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            final
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
-        
+        <div class="jd-descrdiv">Returns the build of the DevKit used to create this module
+</div>
+  
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
+            abstract
             
             
-            final
             
             
-            void</nobr>
+            String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getDevkitVersion()">getDevkitVersion</a></span>()</nobr>
         
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            final
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
+        <div class="jd-descrdiv">Returns the version of the DevKit used to create this module
 </div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.process.ProcessTemplate" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.mule.api.process.ProcessTemplate-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  org.mule.api.process.ProcessTemplate
-
-<div id="inherited-methods-org.mule.api.process.ProcessTemplate">
-  <div id="inherited-methods-org.mule.api.process.ProcessTemplate-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.mule.api.process.ProcessTemplate-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
+  
+  </td></tr>
 
 
 	 
@@ -760,21 +541,43 @@ From interface
             
             
             
-            T</nobr>
+            String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">execute</span>(ProcessCallback&lt;T,&nbsp;O&gt; arg0, MessageProcessor arg1, MuleEvent arg2)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getModuleName()">getModuleName</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Returns the user-friendly name of this module
+</div>
+  
   </td></tr>
 
 
-</table>
-  </div>
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getModuleVersion()">getModuleVersion</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the version of this module
 </div>
-</td></tr>
+  
+  </td></tr>
+
 
 
 </table>
+
+
+
+
+
 
 
 </div><!-- jd-descr (summary) -->
@@ -800,95 +603,7 @@ From interface
 <!-- Fields -->
 
 
-<!-- ========= FIELD DETAIL ======== -->
-<h2>Fields</h2>
-
-
-
-
-<A NAME="processInterceptor"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        private 
-         
-        final 
-        ProcessInterceptor&lt;P,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a>&gt;
-      </span>
-        processInterceptor
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    
-    </div>
-</div>
-
-
-
-
 <!-- Public ctors -->
-
-
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<h2>Public Constructors</h2>
-
-
-
-<A NAME="ManagedConnectionProcessTemplate(org.mule.api.ConnectionManager<org.mule.module.getsatisfaction.connectivity.GetSatisfactionConnectorConnectionKey, org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorConnectionIdentifierAdapter>, org.mule.api.MuleContext)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        
-      </span>
-      <span class="sympad">ManagedConnectionProcessTemplate</span>
-      <span class="normal">(ConnectionManager&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionKey.html">GetSatisfactionConnectorConnectionKey</a>,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a>&gt; connectionManager, MuleContext muleContext)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>connectionManager</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>muleContext</td>
-          <td></td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
 
 
 
@@ -904,7 +619,7 @@ From interface
 
 
 
-<A NAME="execute(org.mule.api.process.ProcessCallback<P, org.mule.module.getsatisfaction.adapters.GetSatisfactionConnectorConnectionIdentifierAdapter>, org.mule.api.processor.MessageProcessor, org.mule.api.MuleEvent)"></A>
+<A NAME="getDevkitBuild()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -912,12 +627,12 @@ From interface
         public 
          
          
+        abstract 
          
-         
-        P
+        String
       </span>
-      <span class="sympad">execute</span>
-      <span class="normal">(ProcessCallback&lt;P,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a>&gt; processCallback, MessageProcessor messageProcessor, MuleEvent event)</span>
+      <span class="sympad">getDevkitBuild</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -929,33 +644,104 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>processCallback</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>messageProcessor</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>event</td>
-          <td></td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Throws</h5>
-      <table class="jd-tagtable">  
-        <tr>
-            <th>Exception</td>
-            <td></td>
-        </tr>
-      </table>
-  </div>
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the build of the DevKit used to create this module
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="getDevkitVersion()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        String
+      </span>
+      <span class="sympad">getDevkitVersion</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the version of the DevKit used to create this module
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="getModuleName()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        String
+      </span>
+      <span class="sympad">getModuleName</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the user-friendly name of this module
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="getModuleVersion()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        String
+      </span>
+      <span class="sympad">getModuleVersion</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the version of this module
+</p></div>
 
     </div>
 </div>

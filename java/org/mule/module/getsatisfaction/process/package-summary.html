@@ -206,19 +206,31 @@
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/package-summary.html">org.mule.module.getsatisfaction</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/adapter/package-summary.html">org.mule.module.getsatisfaction.adapter</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/package-summary.html">org.mule.module.getsatisfaction.adapters</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/agents/package-summary.html">org.mule.module.getsatisfaction.agents</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/package-summary.html">org.mule.module.getsatisfaction.basic</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/callback/package-summary.html">org.mule.module.getsatisfaction.callback</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/connection/package-summary.html">org.mule.module.getsatisfaction.connection</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/package-summary.html">org.mule.module.getsatisfaction.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/devkit/package-summary.html">org.mule.module.getsatisfaction.devkit</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/package-summary.html">org.mule.module.getsatisfaction.model</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/holders/package-summary.html">org.mule.module.getsatisfaction.model.holders</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/transformers/package-summary.html">org.mule.module.getsatisfaction.model.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/oauth/package-summary.html">org.mule.module.getsatisfaction.oauth</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/process/package-summary.html">org.mule.module.getsatisfaction.process</a></li>
     <li class="api apilevel-">
@@ -231,10 +243,18 @@
           <div id="classes-nav">
             <ul>
               
+    <li><h2>Interfaces</h2>
+      <ul>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessAdapter.html">ProcessAdapter</a>&lt;O&gt;</li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessCallback.html">ProcessCallback</a>&lt;T,&nbsp;O&gt;</li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessInterceptor.html">ProcessInterceptor</a>&lt;T,&nbsp;O&gt;</li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessTemplate.html">ProcessTemplate</a>&lt;T,&nbsp;O&gt;</li>
+      </ul>
+    </li>
               
     <li><h2>Classes</h2>
       <ul>
-        <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ManagedConnectionProcessInterceptor.html">ManagedConnectionProcessInterceptor</a>&lt;T&gt;</li>
+        <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/GetSatisfactionConnectorManagedConnectionProcessInterceptor.html">GetSatisfactionConnectorManagedConnectionProcessInterceptor</a>&lt;T&gt;</li>
         <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/NestedProcessorChain.html">NestedProcessorChain</a></li>
         <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessCallbackProcessInterceptor.html">ProcessCallbackProcessInterceptor</a>&lt;T,&nbsp;O&gt;</li>
         <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/RetryProcessInterceptor.html">RetryProcessInterceptor</a>&lt;T,&nbsp;O&gt;</li>
@@ -303,6 +323,29 @@
 
 
   
+    <h2>Interfaces</h2>
+    <div class="jd-sumtable">
+    
+  <table class="jd-sumtable-expando">
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessAdapter.html">ProcessAdapter</a>&lt;O&gt;</td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessCallback.html">ProcessCallback</a>&lt;T,&nbsp;O&gt;</td>
+              <td class="jd-descrcol" width="100%">Callback with logic to execute within a controlled environment provided by <code><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessTemplate.html">ProcessTemplate</a></code>&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessInterceptor.html">ProcessInterceptor</a>&lt;T,&nbsp;O&gt;</td>
+              <td class="jd-descrcol" width="100%">&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessTemplate.html">ProcessTemplate</a>&lt;T,&nbsp;O&gt;</td>
+              <td class="jd-descrcol" width="100%">ProcessTemplate provides a processing context for message processing.&nbsp;</td>
+          </tr>
+  </table>
+    </div>
+  
 
 
   
@@ -311,7 +354,7 @@
     
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/ManagedConnectionProcessInterceptor.html">ManagedConnectionProcessInterceptor</a>&lt;T&gt;</td>
+              <td class="jd-linkcol"><a href="../../../../../../java/org/mule/module/getsatisfaction/process/GetSatisfactionConnectorManagedConnectionProcessInterceptor.html">GetSatisfactionConnectorManagedConnectionProcessInterceptor</a>&lt;T&gt;</td>
               <td class="jd-descrcol" width="100%">&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >

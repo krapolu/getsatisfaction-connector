@@ -204,20 +204,32 @@
                 
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/package-summary.html">org.mule.module.getsatisfaction</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/adapter/package-summary.html">org.mule.module.getsatisfaction.adapter</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/package-summary.html">org.mule.module.getsatisfaction.adapters</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/agents/package-summary.html">org.mule.module.getsatisfaction.agents</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/basic/package-summary.html">org.mule.module.getsatisfaction.basic</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/callback/package-summary.html">org.mule.module.getsatisfaction.callback</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/connection/package-summary.html">org.mule.module.getsatisfaction.connection</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/connectivity/package-summary.html">org.mule.module.getsatisfaction.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/devkit/package-summary.html">org.mule.module.getsatisfaction.devkit</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/package-summary.html">org.mule.module.getsatisfaction.model</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/holders/package-summary.html">org.mule.module.getsatisfaction.model.holders</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/model/transformers/package-summary.html">org.mule.module.getsatisfaction.model.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/mule/module/getsatisfaction/oauth/package-summary.html">org.mule.module.getsatisfaction.oauth</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../java/org/mule/module/getsatisfaction/process/package-summary.html">org.mule.module.getsatisfaction.process</a></li>
     <li class="api apilevel-">
@@ -235,8 +247,6 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorCapabilitiesAdapter.html">GetSatisfactionConnectorCapabilitiesAdapter</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a></li>
-          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionManager.html">GetSatisfactionConnectorConnectionManager</a></li>
-          <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionManager.ConnectionKey.html">GetSatisfactionConnectorConnectionManager.ConnectionKey</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorLifecycleAdapter.html">GetSatisfactionConnectorLifecycleAdapter</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html">GetSatisfactionConnectorMetadataAdapater</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorProcessAdapter.html">GetSatisfactionConnectorProcessAdapter</a></li>
@@ -334,27 +344,6 @@
    
   
   
-  
-  
-
-  
-   
-  
-  
-  
-  
-
-  
-   
-  
-  
-  
-  
-
-  
-   
-  
-  
    
   
   
@@ -383,6 +372,27 @@
   
   
    
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
   
   
   
@@ -482,7 +492,7 @@ Summary:
   
       implements 
       
-        Connection 
+        <a href="../../../../../../java/org/mule/module/getsatisfaction/connection/Connection.html">Connection</a> 
       
   
   
@@ -623,7 +633,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>A <code>GetSatisfactionConnectorConnectionIdentifierAdapter</code> is a wrapper around <code><a href="../../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that implements org.mule.api.Connection interface.
+<p>A <code>GetSatisfactionConnectorConnectionIdentifierAdapter</code> is a wrapper around <code><a href="../../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that implements org.mule.devkit.dynamic.api.helper.Connection interface.
  
 </p>
 
@@ -727,12 +737,6 @@ Summary:
   </div>
 </div>
 </td></tr>
-
-
-
-
-
-
 
 
 
@@ -867,6 +871,12 @@ org.mule.api.lifecycle.Stoppable
 
 
 
+
+
+
+
+
+
 </table>
 
 
@@ -912,13 +922,25 @@ org.mule.api.lifecycle.Stoppable
           
           
           String</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#companyName">companyName</a></td>
+          <td class="jd-descrcol" width="100%">Fastpass url connection 
+</td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          
+          
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#email">email</a></td>
           <td class="jd-descrcol" width="100%">Email address of the user
 </td>
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -930,7 +952,7 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
+      <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -942,7 +964,7 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -954,7 +976,7 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
+      <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -966,7 +988,7 @@ org.mule.api.lifecycle.Stoppable
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -1054,6 +1076,9 @@ org.mule.api.lifecycle.Stoppable
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html#getConnectionIdentifier()">getConnectionIdentifier</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Retrieve the identification of this connection
+</div>
+  
   </td></tr>
 
 
@@ -1099,7 +1124,7 @@ From class
             
             
             &lt;P&gt;
-            ProcessTemplate&lt;P,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorCapabilitiesAdapter.html">GetSatisfactionConnectorCapabilitiesAdapter</a>&gt;</nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessTemplate.html">ProcessTemplate</a>&lt;P,&nbsp;<a href="../../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorCapabilitiesAdapter.html">GetSatisfactionConnectorCapabilitiesAdapter</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorProcessAdapter.html#getProcessTemplate()">getProcessTemplate</a></span>()</nobr>
@@ -1236,6 +1261,9 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html#getDevkitBuild()">getDevkitBuild</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Returns the build of the DevKit used to create this module
+</div>
+  
   </td></tr>
 
 
@@ -1252,6 +1280,9 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html#getDevkitVersion()">getDevkitVersion</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Returns the version of the DevKit used to create this module
+</div>
+  
   </td></tr>
 
 
@@ -1268,6 +1299,9 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html#getModuleName()">getModuleName</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Returns the user-friendly name of this module
+</div>
+  
   </td></tr>
 
 
@@ -1284,6 +1318,9 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html#getModuleVersion()">getModuleVersion</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Returns the version of this module
+</div>
+  
   </td></tr>
 
 
@@ -1324,7 +1361,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorCapabilitiesAdapter.html#isCapableOf(org.mule.api.Capability)">isCapableOf</a></span>(Capability capability)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorCapabilitiesAdapter.html#isCapableOf(org.mule.module.getsatisfaction.basic.Capability)">isCapableOf</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a> capability)</nobr>
         
         <div class="jd-descrdiv">Returns true if this module implements such capability
  
@@ -1466,13 +1503,29 @@ From class
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getEmail()">getEmail</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getCompanyName()">getCompanyName</a></span>()</nobr>
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getEmail()">getEmail</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1488,7 +1541,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1504,7 +1557,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1520,7 +1573,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -1533,26 +1586,6 @@ From class
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getProductsByCompany(java.lang.String)">getProductsByCompany</a></span>(String company)</nobr>
         
         <div class="jd-descrdiv">Get all products in a particular community
- <p/>
- </div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getReplies</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
-        
-        <div class="jd-descrdiv">Get all replies
  <p/>
  </div>
   
@@ -1761,13 +1794,29 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setEmail(java.lang.String)">setEmail</a></span>(String email)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setCompanyName(java.lang.String)">setCompanyName</a></span>(String companyName)</nobr>
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setEmail(java.lang.String)">setEmail</a></span>(String email)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1783,7 +1832,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1799,7 +1848,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1815,7 +1864,7 @@ From class
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1831,7 +1880,7 @@ From class
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1843,6 +1892,24 @@ From class
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setUid(java.lang.String)">setUid</a></span>(String uid)</nobr>
         
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformGsObjectToJson(java.lang.Object)">transformGsObjectToJson</a></span>(Object obj)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of an object from GetSatisfaction.</div>
+  
   </td></tr>
 
 
@@ -1937,6 +2004,46 @@ From class
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformProductToJson(org.mule.module.getsatisfaction.model.Product)">transformProductToJson</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a> product)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> object
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformProductsToJson(java.util.List<org.mule.module.getsatisfaction.model.Product>)">transformProductsToJson</a></span>(List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a>&gt; products)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a list of <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> objects 
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformReplyToJson(org.mule.module.getsatisfaction.model.Reply)">transformReplyToJson</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a> reply)</nobr>
         
         <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> object
@@ -1957,9 +2064,49 @@ From class
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformReplysToJson(java.util.List<org.mule.module.getsatisfaction.model.Reply>)">transformReplysToJson</a></span>(List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt; replys)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a list of <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> objects 
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformTopicToJson(org.mule.module.getsatisfaction.model.Topic)">transformTopicToJson</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a> topic)</nobr>
         
         <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> object
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformTopicsToJson(java.util.List<org.mule.module.getsatisfaction.model.Topic>)">transformTopicsToJson</a></span>(List&lt;<a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt; topics)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a list of <code><a href="../../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> objects 
  <p/>
  </div>
   
@@ -2177,180 +2324,6 @@ From class
 
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.Capabilities" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.mule.api.Capabilities-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  org.mule.api.Capabilities
-
-<div id="inherited-methods-org.mule.api.Capabilities">
-  <div id="inherited-methods-org.mule.api.Capabilities-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.mule.api.Capabilities-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">isCapableOf</span>(Capability arg0)</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.Connection" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.mule.api.Connection-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  org.mule.api.Connection
-
-<div id="inherited-methods-org.mule.api.Connection">
-  <div id="inherited-methods-org.mule.api.Connection-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.mule.api.Connection-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            String</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getConnectionIdentifier</span>()</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.MetadataAware" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.mule.api.MetadataAware-trigger"
-          src="../../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  org.mule.api.MetadataAware
-
-<div id="inherited-methods-org.mule.api.MetadataAware">
-  <div id="inherited-methods-org.mule.api.MetadataAware-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.mule.api.MetadataAware-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            String</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getDevkitBuild</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            String</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getDevkitVersion</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            String</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getModuleName</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            String</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getModuleVersion</span>()</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.lifecycle.Disposable" class="jd-expando-trigger closed"
           ><img id="inherited-methods-org.mule.api.lifecycle.Disposable-trigger"
           src="../../../../../../assets/images/triangle-closed.png"
@@ -2519,19 +2492,211 @@ From interface
 
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.api.process.ProcessAdapter" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.mule.api.process.ProcessAdapter-trigger"
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.module.getsatisfaction.basic.Capabilities" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.module.getsatisfaction.basic.Capabilities-trigger"
           src="../../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 
-  org.mule.api.process.ProcessAdapter
+  <a href="../../../../../../org/mule/module/getsatisfaction/basic/Capabilities.html">org.mule.module.getsatisfaction.basic.Capabilities</a>
 
-<div id="inherited-methods-org.mule.api.process.ProcessAdapter">
-  <div id="inherited-methods-org.mule.api.process.ProcessAdapter-list"
+<div id="inherited-methods-org.mule.module.getsatisfaction.basic.Capabilities">
+  <div id="inherited-methods-org.mule.module.getsatisfaction.basic.Capabilities-list"
         class="jd-inheritedlinks">
   </div>
-  <div id="inherited-methods-org.mule.api.process.ProcessAdapter-summary" style="display: none;">
+  <div id="inherited-methods-org.mule.module.getsatisfaction.basic.Capabilities-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/Capabilities.html#isCapableOf(org.mule.module.getsatisfaction.basic.Capability)">isCapableOf</a></span>(<a href="../../../../../../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a> capability)</nobr>
+        
+        <div class="jd-descrdiv">Returns true if this module implements such
+ capability</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.module.getsatisfaction.basic.MetadataAware" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.module.getsatisfaction.basic.MetadataAware-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html">org.mule.module.getsatisfaction.basic.MetadataAware</a>
+
+<div id="inherited-methods-org.mule.module.getsatisfaction.basic.MetadataAware">
+  <div id="inherited-methods-org.mule.module.getsatisfaction.basic.MetadataAware-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.module.getsatisfaction.basic.MetadataAware-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getDevkitBuild()">getDevkitBuild</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the build of the DevKit used to create this module
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getDevkitVersion()">getDevkitVersion</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the version of the DevKit used to create this module
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getModuleName()">getModuleName</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the user-friendly name of this module
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/basic/MetadataAware.html#getModuleVersion()">getModuleVersion</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the version of this module
+</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.module.getsatisfaction.connection.Connection" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.module.getsatisfaction.connection.Connection-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../../../org/mule/module/getsatisfaction/connection/Connection.html">org.mule.module.getsatisfaction.connection.Connection</a>
+
+<div id="inherited-methods-org.mule.module.getsatisfaction.connection.Connection">
+  <div id="inherited-methods-org.mule.module.getsatisfaction.connection.Connection-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.module.getsatisfaction.connection.Connection-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/connection/Connection.html#getConnectionIdentifier()">getConnectionIdentifier</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Retrieve the identification of this connection
+</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.mule.module.getsatisfaction.process.ProcessAdapter" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.mule.module.getsatisfaction.process.ProcessAdapter-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../../../org/mule/module/getsatisfaction/process/ProcessAdapter.html">org.mule.module.getsatisfaction.process.ProcessAdapter</a>
+
+<div id="inherited-methods-org.mule.module.getsatisfaction.process.ProcessAdapter">
+  <div id="inherited-methods-org.mule.module.getsatisfaction.process.ProcessAdapter-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.mule.module.getsatisfaction.process.ProcessAdapter-summary" style="display: none;">
     <table class="jd-sumtable-expando">
     
 
@@ -2544,10 +2709,10 @@ From interface
             
             
             &lt;T&gt;
-            ProcessTemplate&lt;T,&nbsp;O&gt;</nobr>
+            <a href="../../../../../../java/org/mule/module/getsatisfaction/process/ProcessTemplate.html">ProcessTemplate</a>&lt;T,&nbsp;O&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getProcessTemplate</span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/getsatisfaction/process/ProcessAdapter.html#getProcessTemplate()">getProcessTemplate</a></span>()</nobr>
         
   </td></tr>
 
@@ -2663,7 +2828,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Retrieve the identification of this connection
+</p></div>
 
     </div>
 </div>

@@ -205,19 +205,31 @@
     <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/package-summary.html">org.mule.module.getsatisfaction</a></li>
     <li class="api apilevel-">
+  <a href="../java/org/mule/module/getsatisfaction/adapter/package-summary.html">org.mule.module.getsatisfaction.adapter</a></li>
+    <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/adapters/package-summary.html">org.mule.module.getsatisfaction.adapters</a></li>
     <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/agents/package-summary.html">org.mule.module.getsatisfaction.agents</a></li>
     <li class="api apilevel-">
+  <a href="../java/org/mule/module/getsatisfaction/basic/package-summary.html">org.mule.module.getsatisfaction.basic</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/module/getsatisfaction/callback/package-summary.html">org.mule.module.getsatisfaction.callback</a></li>
+    <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
     <li class="api apilevel-">
+  <a href="../java/org/mule/module/getsatisfaction/connection/package-summary.html">org.mule.module.getsatisfaction.connection</a></li>
+    <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/connectivity/package-summary.html">org.mule.module.getsatisfaction.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/module/getsatisfaction/devkit/package-summary.html">org.mule.module.getsatisfaction.devkit</a></li>
     <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/model/package-summary.html">org.mule.module.getsatisfaction.model</a></li>
     <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/model/holders/package-summary.html">org.mule.module.getsatisfaction.model.holders</a></li>
     <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/model/transformers/package-summary.html">org.mule.module.getsatisfaction.model.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../java/org/mule/module/getsatisfaction/oauth/package-summary.html">org.mule.module.getsatisfaction.oauth</a></li>
     <li class="api apilevel-">
   <a href="../java/org/mule/module/getsatisfaction/process/package-summary.html">org.mule.module.getsatisfaction.process</a></li>
     <li class="api apilevel-">
@@ -276,9 +288,11 @@
     <a href="#letter_D">D</a>
     <a href="#letter_E">E</a>
     <a href="#letter_G">G</a>
+    <a href="#letter_H">H</a>
     <a href="#letter_J">J</a>
     <a href="#letter_M">M</a>
     <a href="#letter_N">N</a>
+    <a href="#letter_O">O</a>
     <a href="#letter_P">P</a>
     <a href="#letter_R">R</a>
     <a href="#letter_S">S</a>
@@ -351,6 +365,30 @@
 
 <h2 id="letter_C">C</h2>
 <table class="jd-sumtable">
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/basic/Capabilities.html">Capabilities</a></td>
+            <td class="jd-descrcol" width="100%">This interface is implemented for every org.mule.api.annotations.Module annotated class, to dynamically query what its capabilities are.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/basic/Capability.html">Capability</a></td>
+            <td class="jd-descrcol" width="100%">Enumeration of possible capabilities of Mule modules.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/connection/Connection.html">Connection</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/connection/ConnectionManager.html">ConnectionManager</a>&lt;K,&nbsp;C&nbsp;extends&nbsp;<a href="../java/org/mule/module/getsatisfaction/connection/Connection.html">Connection</a>&gt;</td>
+            <td class="jd-descrcol" width="100%">Wrapper around org.mule.api.annotations.Connector annotated class that will infuse it with connection management capabilities.&nbsp;</td>
+        </tr>
     
     
         <tr class="alt-color api apilevel-" >
@@ -461,20 +499,10 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetRepliesDefinitionParser.html">GetRepliesDefinitionParser</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/processors/GetRepliesMessageProcessor.html">GetRepliesMessageProcessor</a></td>
-            <td class="jd-descrcol" width="100%">GetRepliesMessageProcessor invokes the <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)</a></code> method in <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code>.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></td>
-            <td class="jd-descrcol" width="100%">Cloud Connector&nbsp;</td>
+            <td class="jd-descrcol" width="100%">GetSatisfaction Cloud Connector
+ <p/>
+ Allows to access the services provided by GetSatisfaction in a RESTful manner.&nbsp;</td>
         </tr>
     
     
@@ -498,7 +526,7 @@
     
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a></td>
-            <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionIdentifierAdapter</code> is a wrapper around <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that implements org.mule.api.Connection interface.&nbsp;</td>
+            <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionIdentifierAdapter</code> is a wrapper around <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that implements org.mule.devkit.dynamic.api.helper.Connection interface.&nbsp;</td>
         </tr>
     
     
@@ -511,22 +539,8 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionManager.html">GetSatisfactionConnectorConnectionManager</a></td>
-            <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionManager</code> is a wrapper around <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that adds connection management capabilities to the pojo.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorConnectionManager.html">GetSatisfactionConnectorConnectionManager</a></td>
             <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionManager</code> is a wrapper around <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that adds connection management capabilities to the pojo.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionManager.ConnectionKey.html">GetSatisfactionConnectorConnectionManager.ConnectionKey</a></td>
-            <td class="jd-descrcol" width="100%">A tuple of connection parameters
- 
-&nbsp;</td>
         </tr>
     
     
@@ -537,92 +551,117 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/process/GetSatisfactionConnectorManagedConnectionProcessInterceptor.html">GetSatisfactionConnectorManagedConnectionProcessInterceptor</a>&lt;T&gt;</td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/connectivity/GetSatisfactionConnectorManagedConnectionProcessTemplate.html">GetSatisfactionConnectorManagedConnectionProcessTemplate</a>&lt;P&gt;</td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorMetadataAdapater.html">GetSatisfactionConnectorMetadataAdapater</a></td>
             <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorMetadataAdapater</code> is a wrapper around <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that adds support for querying metadata about the extension.&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetSatisfactionConnectorNamespaceHandler.html">GetSatisfactionConnectorNamespaceHandler</a></td>
-            <td class="jd-descrcol" width="100%">Registers bean definitions parsers for handling elements in <code>http://www.mulesoft.org/schema/mule/getsatisfaction</code>.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorProcessAdapter.html">GetSatisfactionConnectorProcessAdapter</a></td>
             <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorProcessAdapter</code> is a wrapper around <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that enables custom processing strategies.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorRestClientAdapter.html">GetSatisfactionConnectorRestClientAdapter</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetsatisfactionNamespaceHandler.html">GetsatisfactionNamespaceHandler</a></td>
             <td class="jd-descrcol" width="100%">Registers bean definitions parsers for handling elements in <code>http://www.mulesoft.org/schema/mule/getsatisfaction</code>.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetTopicByCompanyDefinitionParser.html">GetTopicByCompanyDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/processors/GetTopicByCompanyMessageProcessor.html">GetTopicByCompanyMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">GetTopicByCompanyMessageProcessor invokes the <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicByCompany(java.lang.String, java.lang.String)">getTopicByCompany(java.lang.String, java.lang.String)</a></code> method in <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code>.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetTopicDefinitionParser.html">GetTopicDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/processors/GetTopicMessageProcessor.html">GetTopicMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">GetTopicMessageProcessor invokes the <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopic(java.lang.String)">getTopic(java.lang.String)</a></code> method in <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code>.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetTopicsByCompanyAndProductDefinitionParser.html">GetTopicsByCompanyAndProductDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/processors/GetTopicsByCompanyAndProductMessageProcessor.html">GetTopicsByCompanyAndProductMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">GetTopicsByCompanyAndProductMessageProcessor invokes the <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicsByCompanyAndProduct(java.lang.String, java.lang.String, java.lang.String)">getTopicsByCompanyAndProduct(java.lang.String, java.lang.String, java.lang.String)</a></code> method in <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code>.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetTopicsByCompanyDefinitionParser.html">GetTopicsByCompanyDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/processors/GetTopicsByCompanyMessageProcessor.html">GetTopicsByCompanyMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">GetTopicsByCompanyMessageProcessor invokes the <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopicsByCompany(java.lang.String)">getTopicsByCompany(java.lang.String)</a></code> method in <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code>.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/config/GetTopicsDefinitionParser.html">GetTopicsDefinitionParser</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/processors/GetTopicsMessageProcessor.html">GetTopicsMessageProcessor</a></td>
             <td class="jd-descrcol" width="100%">GetTopicsMessageProcessor invokes the <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getTopics(java.lang.String, org.mule.module.getsatisfaction.model.SortCriteria, org.mule.module.getsatisfaction.model.Style, java.lang.Long, java.lang.String, java.util.List<java.lang.String>, java.lang.String, java.util.List<org.mule.module.getsatisfaction.model.Status>, java.util.List<java.lang.String>)">getTopics(java.lang.String, org.mule.module.getsatisfaction.model.SortCriteria, org.mule.module.getsatisfaction.model.Style, java.lang.Long, java.lang.String, java.util.List, java.lang.String, java.util.List, java.util.List)</a></code> method in <code><a href="../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+</table>
+
+
+<h2 id="letter_H">H</h2>
+<table class="jd-sumtable">
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/callback/HttpCallback.html">HttpCallback</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapter/HttpCallbackAdapter.html">HttpCallbackAdapter</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
@@ -647,14 +686,8 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/process/ManagedConnectionProcessInterceptor.html">ManagedConnectionProcessInterceptor</a>&lt;T&gt;</td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/connectivity/ManagedConnectionProcessTemplate.html">ManagedConnectionProcessTemplate</a>&lt;P&gt;</td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/basic/MetadataAware.html">MetadataAware</a></td>
+            <td class="jd-descrcol" width="100%">This interface is implemented for every org.mule.api.annotations.Module and org.mule.api.annotations.Connector annotated class and its purpose is to define a contract to query the annotated class about its metadata.&nbsp;</td>
         </tr>
     
     
@@ -671,6 +704,44 @@
         </tr>
     
     
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/NotAuthorizedException.html">NotAuthorizedException</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+</table>
+
+
+<h2 id="letter_O">O</h2>
+<table class="jd-sumtable">
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/OAuth1Adapter.html">OAuth1Adapter</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/OAuth2Adapter.html">OAuth2Adapter</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/OAuthAdapter.html">OAuthAdapter</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/OAuthManager.html">OAuthManager</a>&lt;C&nbsp;extends&nbsp;<a href="../java/org/mule/module/getsatisfaction/oauth/OAuthAdapter.html">OAuthAdapter</a>&gt;</td>
+            <td class="jd-descrcol" width="100%">Wrapper around org.mule.api.annotations.oauth.OAuth annotated class that will infuse it with
+ access token management capabilities.&nbsp;</td>
+        </tr>
+    
+    
 </table>
 
 
@@ -679,14 +750,50 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/adapter/PoolManager.html">PoolManager</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/Post.html">Post</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/holders/PostExpressionHolder.html">PostExpressionHolder</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/process/ProcessAdapter.html">ProcessAdapter</a>&lt;O&gt;</td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/process/ProcessCallback.html">ProcessCallback</a>&lt;T,&nbsp;O&gt;</td>
+            <td class="jd-descrcol" width="100%">Callback with logic to execute within a controlled environment provided by <code><a href="../java/org/mule/module/getsatisfaction/process/ProcessTemplate.html">ProcessTemplate</a></code>&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/process/ProcessCallbackProcessInterceptor.html">ProcessCallbackProcessInterceptor</a>&lt;T,&nbsp;O&gt;</td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/process/ProcessInterceptor.html">ProcessInterceptor</a>&lt;T,&nbsp;O&gt;</td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/process/ProcessTemplate.html">ProcessTemplate</a>&lt;T,&nbsp;O&gt;</td>
+            <td class="jd-descrcol" width="100%">ProcessTemplate provides a processing context for message processing.&nbsp;</td>
         </tr>
     
     
@@ -746,7 +853,7 @@
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/ReplyFilterCriteriaEnumTransformer.html">ReplyFilterCriteriaEnumTransformer</a></td>
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/RestoreAccessTokenCallback.html">RestoreAccessTokenCallback</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
@@ -765,26 +872,38 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/SaveAccessTokenCallback.html">SaveAccessTokenCallback</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/SearchResults.html">SearchResults</a>&lt;T&gt;</td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/SortCriteria.html">SortCriteria</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/transformers/SortCriteriaEnumTransformer.html">SortCriteriaEnumTransformer</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/callback/SourceCallback.html">SourceCallback</a></td>
+            <td class="jd-descrcol" width="100%">Callback interface used by org.mule.api.annotations.Source annotated methods to dispatch messages.&nbsp;</td>
+        </tr>
+    
+    
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/SortCriteriaEnumTransformer.html">SortCriteriaEnumTransformer</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/devkit/SplashScreenAgent.html">SplashScreenAgent</a></td>
+            <td class="jd-descrcol" width="100%">Marks DevKit org.mule.api.agent.Agent implementations to take care of logging information at Mule app level mainly for troubleshooting purposes.&nbsp;</td>
         </tr>
     
     
@@ -801,8 +920,10 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/StatusEnumTransformer.html">StatusEnumTransformer</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/callback/StopSourceCallback.html">StopSourceCallback</a></td>
+            <td class="jd-descrcol" width="100%">Callback returned by methods that are annotated with @Source
+ <p/>
+ It will be executed when the MessageSource is being stopped.&nbsp;</td>
         </tr>
     
     
@@ -820,12 +941,6 @@
     
         <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/transformers/StyleEnumTransformer.html">StyleEnumTransformer</a></td>
-            <td class="jd-descrcol" width="100%">&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/StyleEnumTransformer.html">StyleEnumTransformer</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
@@ -856,25 +971,49 @@
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformGsObjectToJsonTransformer.html">TransformGsObjectToJsonTransformer</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformJsonToProductsTransformer.html">TransformJsonToProductsTransformer</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformJsonToRepliesTransformer.html">TransformJsonToRepliesTransformer</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformJsonToTopicsTransformer.html">TransformJsonToTopicsTransformer</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformJsonToTopicTransformer.html">TransformJsonToTopicTransformer</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformProductsToJsonTransformer.html">TransformProductsToJsonTransformer</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformProductToJsonTransformer.html">TransformProductToJsonTransformer</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformReplysToJsonTransformer.html">TransformReplysToJsonTransformer</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
@@ -886,6 +1025,12 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformTopicsToJsonTransformer.html">TransformTopicsToJsonTransformer</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/transformers/TransformTopicToJsonTransformer.html">TransformTopicToJsonTransformer</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
@@ -899,7 +1044,43 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/UnableToAcquireAccessTokenException.html">UnableToAcquireAccessTokenException</a></td>
+            <td class="jd-descrcol" width="100%">Exception thrown when the access token needed for accessing a protected resource cannot be acquired
+ 
+&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/connection/UnableToAcquireConnectionException.html">UnableToAcquireConnectionException</a></td>
+            <td class="jd-descrcol" width="100%">Exception thrown when the connection needed for executing an
+  operation is null.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/oauth/UnableToAcquireRequestTokenException.html">UnableToAcquireRequestTokenException</a></td>
+            <td class="jd-descrcol" width="100%">Exception thrown when the request token needed for building the authorization URL cannot be acquired
+ 
+&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/connection/UnableToReleaseConnectionException.html">UnableToReleaseConnectionException</a></td>
+            <td class="jd-descrcol" width="100%">Exception thrown when the release connection operation of the
+  connection manager fails.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/User.html">User</a></td>
+            <td class="jd-descrcol" width="100%">&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="../java/org/mule/module/getsatisfaction/model/holders/UserExpressionHolder.html">UserExpressionHolder</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     

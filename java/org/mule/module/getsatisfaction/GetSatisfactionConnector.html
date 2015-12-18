@@ -205,19 +205,31 @@
     <li class="selected api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/package-summary.html">org.mule.module.getsatisfaction</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../java/org/mule/module/getsatisfaction/adapter/package-summary.html">org.mule.module.getsatisfaction.adapter</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/adapters/package-summary.html">org.mule.module.getsatisfaction.adapters</a></li>
     <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/agents/package-summary.html">org.mule.module.getsatisfaction.agents</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../java/org/mule/module/getsatisfaction/basic/package-summary.html">org.mule.module.getsatisfaction.basic</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../java/org/mule/module/getsatisfaction/callback/package-summary.html">org.mule.module.getsatisfaction.callback</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/config/package-summary.html">org.mule.module.getsatisfaction.config</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../java/org/mule/module/getsatisfaction/connection/package-summary.html">org.mule.module.getsatisfaction.connection</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/connectivity/package-summary.html">org.mule.module.getsatisfaction.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../java/org/mule/module/getsatisfaction/devkit/package-summary.html">org.mule.module.getsatisfaction.devkit</a></li>
     <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/model/package-summary.html">org.mule.module.getsatisfaction.model</a></li>
     <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/model/holders/package-summary.html">org.mule.module.getsatisfaction.model.holders</a></li>
     <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/model/transformers/package-summary.html">org.mule.module.getsatisfaction.model.transformers</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../java/org/mule/module/getsatisfaction/oauth/package-summary.html">org.mule.module.getsatisfaction.oauth</a></li>
     <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/getsatisfaction/process/package-summary.html">org.mule.module.getsatisfaction.process</a></li>
     <li class="api apilevel-">
@@ -442,7 +454,7 @@ Summary:
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorConnectionIdentifierAdapter.html">GetSatisfactionConnectorConnectionIdentifierAdapter</a></td>
-              <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionIdentifierAdapter</code> is a wrapper around <code><a href="../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that implements org.mule.api.Connection interface.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">A <code>GetSatisfactionConnectorConnectionIdentifierAdapter</code> is a wrapper around <code><a href="../../../../../java/org/mule/module/getsatisfaction/GetSatisfactionConnector.html">GetSatisfactionConnector</a></code> that implements org.mule.devkit.dynamic.api.helper.Connection interface.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../java/org/mule/module/getsatisfaction/adapters/GetSatisfactionConnectorLifecycleAdapter.html">GetSatisfactionConnectorLifecycleAdapter</a></td>
@@ -470,7 +482,15 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Cloud Connector</p>
+<p>GetSatisfaction Cloud Connector
+ <p/>
+ Allows to access the services provided by GetSatisfaction in a RESTful manner.
+ <p/>
+ Get Satisfaction is the leading customer engagement platform that helps companies build better relationships 
+ with their customers and prospects, and better relationships mean better business. Get Satisfaction powers 70,000 
+ customer communities for companies of all sizes and over 4 million registered users interact with top global brands 
+ on Get Satisfaction. With Get Satisfaction, you can quickly set-up an online customer community to engage with your 
+ customers anywhere they are: your website, Facebook, search and mobile devices.</p>
 
 
 
@@ -526,13 +546,25 @@ Summary:
           
           
           String</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#companyName">companyName</a></td>
+          <td class="jd-descrcol" width="100%">Fastpass url connection 
+</td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          
+          
+          String</nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#email">email</a></td>
           <td class="jd-descrcol" width="100%">Email address of the user
 </td>
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -544,7 +576,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
+      <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -556,7 +588,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -568,7 +600,7 @@ Summary:
       </tr>
       
     
-      <tr class="alt-color api apilevel-" >
+      <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -580,7 +612,7 @@ Summary:
       </tr>
       
     
-      <tr class=" api apilevel-" >
+      <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           private
           
@@ -742,13 +774,29 @@ Summary:
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getEmail()">getEmail</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getCompanyName()">getCompanyName</a></span>()</nobr>
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getEmail()">getEmail</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -764,7 +812,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -780,7 +828,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -796,7 +844,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -809,26 +857,6 @@ Summary:
         <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getProductsByCompany(java.lang.String)">getProductsByCompany</a></span>(String company)</nobr>
         
         <div class="jd-descrdiv">Get all products in a particular community
- <p/>
- </div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)">getReplies</a></span>(<a href="../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</nobr>
-        
-        <div class="jd-descrdiv">Get all replies
  <p/>
  </div>
   
@@ -1037,13 +1065,29 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setEmail(java.lang.String)">setEmail</a></span>(String email)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setCompanyName(java.lang.String)">setCompanyName</a></span>(String companyName)</nobr>
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setEmail(java.lang.String)">setEmail</a></span>(String email)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1059,7 +1103,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1075,7 +1119,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1091,7 +1135,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1107,7 +1151,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1119,6 +1163,24 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#setUid(java.lang.String)">setUid</a></span>(String uid)</nobr>
         
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformGsObjectToJson(java.lang.Object)">transformGsObjectToJson</a></span>(Object obj)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of an object from GetSatisfaction.</div>
+  
   </td></tr>
 
 
@@ -1213,6 +1275,46 @@ Summary:
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformProductToJson(org.mule.module.getsatisfaction.model.Product)">transformProductToJson</a></span>(<a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a> product)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> object
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformProductsToJson(java.util.List<org.mule.module.getsatisfaction.model.Product>)">transformProductsToJson</a></span>(List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a>&gt; products)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> objects 
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformReplyToJson(org.mule.module.getsatisfaction.model.Reply)">transformReplyToJson</a></span>(<a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a> reply)</nobr>
         
         <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> object
@@ -1233,9 +1335,49 @@ Summary:
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformReplysToJson(java.util.List<org.mule.module.getsatisfaction.model.Reply>)">transformReplysToJson</a></span>(List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt; replys)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> objects 
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformTopicToJson(org.mule.module.getsatisfaction.model.Topic)">transformTopicToJson</a></span>(<a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a> topic)</nobr>
         
         <div class="jd-descrdiv">Create a JSON representation of a <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> object
+ <p/>
+ </div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/getsatisfaction/GetSatisfactionConnector.html#transformTopicsToJson(java.util.List<org.mule.module.getsatisfaction.model.Topic>)">transformTopicsToJson</a></span>(List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt; topics)</nobr>
+        
+        <div class="jd-descrdiv">Create a JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> objects 
  <p/>
  </div>
   
@@ -1487,6 +1629,37 @@ From class
 <!-- ========= FIELD DETAIL ======== -->
 <h2>Fields</h2>
 
+
+
+
+<A NAME="companyName"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+         
+         
+        String
+      </span>
+        companyName
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Fastpass url connection 
+</p></div>
+
+    
+    </div>
+</div>
 
 
 
@@ -1973,6 +2146,37 @@ From class
 </div>
 
 
+<A NAME="getCompanyName()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">getCompanyName</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <A NAME="getEmail()"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -2137,66 +2341,6 @@ From class
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>A JSON representing a topic</li></ul>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Throws</h5>
-      <table class="jd-tagtable">  
-        <tr>
-            <th>IOException</td>
-            <td>If there is a communication error
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="getReplies(org.mule.module.getsatisfaction.model.ReplyFilterCriteria, java.lang.Boolean)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt;
-      </span>
-      <span class="sympad">getReplies</span>
-      <span class="normal">(<a href="../../../../../java/org/mule/module/getsatisfaction/model/ReplyFilterCriteria.html">ReplyFilterCriteria</a> filterBy, Boolean includeComments)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Get all replies
- <p/>
- </p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>filterBy</td>
-          <td>Filter by</td>
-        </tr>
-        <tr>
-          <th>includeComments</td>
-          <td>Ixclude comments from the returned replies</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>A JSON representing a reply</li></ul>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Throws</h5>
@@ -2759,6 +2903,46 @@ From class
 </div>
 
 
+<A NAME="setCompanyName(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setCompanyName</span>
+      <span class="normal">(String companyName)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>companyName</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="setEmail(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -2999,6 +3183,66 @@ From class
 </div>
 
 
+<A NAME="transformGsObjectToJson(java.lang.Object)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">transformGsObjectToJson</span>
+      <span class="normal">(Object obj)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create a JSON representation of an object from GetSatisfaction.
+ <p/>
+ Supported objects are <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> and <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code>.
+ <p/>
+ Supported list are list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code>, list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> and list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code>
+ <p/>
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>obj</td>
+          <td>The object to transform</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A JSON representation of the object</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If there is a transformation error
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="transformJsonToProducts(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -3223,6 +3467,118 @@ From class
 </div>
 
 
+<A NAME="transformProductToJson(org.mule.module.getsatisfaction.model.Product)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">transformProductToJson</span>
+      <span class="normal">(<a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a> product)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create a JSON representation of a <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> object
+ <p/>
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>product</td>
+          <td>Product to transform</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A JSON representation of a <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> object</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If there is a transformation error
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="transformProductsToJson(java.util.List<org.mule.module.getsatisfaction.model.Product>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">transformProductsToJson</span>
+      <span class="normal">(List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a>&gt; products)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create a JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> objects 
+ <p/>
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>products</td>
+          <td>List of Product to transform</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Product.html">Product</a></code> objects</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If there is a transformation error
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="transformReplyToJson(org.mule.module.getsatisfaction.model.Reply)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -3279,6 +3635,62 @@ From class
 </div>
 
 
+<A NAME="transformReplysToJson(java.util.List<org.mule.module.getsatisfaction.model.Reply>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">transformReplysToJson</span>
+      <span class="normal">(List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a>&gt; replys)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create a JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> objects 
+ <p/>
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>replys</td>
+          <td>List of Product to transform</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Reply.html">Reply</a></code> objects</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If there is a transformation error
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="transformTopicToJson(org.mule.module.getsatisfaction.model.Topic)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -3319,6 +3731,62 @@ From class
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>A JSON representation of a <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> object</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th>IOException</td>
+            <td>If there is a transformation error
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="transformTopicsToJson(java.util.List<org.mule.module.getsatisfaction.model.Topic>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        String
+      </span>
+      <span class="sympad">transformTopicsToJson</span>
+      <span class="normal">(List&lt;<a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a>&gt; topics)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create a JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> objects 
+ <p/>
+ </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>topics</td>
+          <td>List of Topic to transform</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>A JSON representation of a list of <code><a href="../../../../../java/org/mule/module/getsatisfaction/model/Topic.html">Topic</a></code> objects</li></ul>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Throws</h5>
